@@ -36,7 +36,7 @@ const Globe = () => {
     scene.add(globeGroup)
 
     // Create main globe sphere
-    const geometry = new THREE.SphereGeometry(5, 64, 64)
+    const geometry = new THREE.SphereGeometry(6, 64, 64)
     const material = new THREE.MeshPhongMaterial({
       color: new THREE.Color('#6366f1'),
       transparent: true,
@@ -47,7 +47,7 @@ const Globe = () => {
     globeGroup.add(globe)
 
     // Create outer glow sphere
-    const glowGeometry = new THREE.SphereGeometry(5.2, 64, 64)
+    const glowGeometry = new THREE.SphereGeometry(5.5, 64, 64)
     const glowMaterial = new THREE.MeshPhongMaterial({
       color: new THREE.Color('#818cf8'),
       transparent: true,
