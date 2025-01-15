@@ -35,7 +35,20 @@
   background: linear-gradient(90deg, #FF9100, #FF5E00, #FF9100);
   background-size: 200% 200%;
   animation: gradient-border 3s linear infinite;
+
 }
+
+
+.button-glow2 {
+  position: relative;
+  display: inline-flex;
+  border-radius: 0.75rem;
+  padding: 2px; /* Border thickness */
+  background: linear-gradient(90deg, #FF9100, #FF5E00, #FF9100);
+  background-size: 200% 200%;
+  animation: gradient-border 3s linear infinite;
+}
+
 
 .button-glow-inner {
   display: flex;
@@ -51,18 +64,18 @@
 }
 
 .button-glow-inner2 {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 2px 16px;
- 
-   /* Inner button background color */
+  padding: 4px 16px;
+  border-radius: 0.75rem;
   color: #fff;
   font-weight: 600;
-  text-align: center;
-  transition: transform 0.3s ease;
   font-size: 13px;
+  line-height: 1;
+  height: 100%; /* Ensures the inner button fills the outer button */
 }
+
 
 .button-glow:hover .button-glow-inner {
   transform: scale(1.08);

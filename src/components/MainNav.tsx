@@ -169,11 +169,11 @@ const MainNav = () => {
 
           {/* Mobile Menu Button */}
           <div className="flex md:hidden flex-1 justify-end gap-3">
-          <a href="/book-consultation" className="button-glow" aria-label="Schedule a free consultation">
-  <div className="button-glow-inner2">
-    Book A Call
-  </div>
-</a>
+          <a href="/book-consultation" className="button-glow2" aria-label="Schedule a free consultation">
+    <div className="button-glow-inner2">
+      Book A Call
+    </div>
+  </a>
             <Button
               variant="ghost"
               className="h-8 w-8 p-0"
