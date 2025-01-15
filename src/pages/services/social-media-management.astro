@@ -1,0 +1,156 @@
+---
+import Layout from "../../layouts/Layout.astro"
+import ServicePageLayout from "../../components/ServicePageLayout"
+
+const pageData = {
+  title: "Social Media Management",
+  subtitle: "Grow Your Business Without the Headache",
+  description: "Social media isn’t just about likes and shares — it’s about building trust and getting more leads. We take the hassle out of social media management so you can focus on running your business while we keep you visible and top of mind.",
+  features: [
+    {
+      title: "Multi-Platform Posting",
+      description: "We post your content across all major platforms — including Facebook, Instagram, YouTube, and Google Business. Your brand stays visible everywhere your customers are looking.",
+      icon: "📲"
+    },
+    {
+      title: "Consistent, Engaging Content",
+      description: "No more scrambling for ideas or missing posting days. We create a posting schedule that ensures your accounts grow steadily over time.",
+      icon: "📅"
+    },
+    {
+      title: "Video Content That Stands Out",
+      description: "Video content drives more engagement than any other format. We take your raw clips and turn them into scroll-stopping content that builds trust and drives inquiries.",
+      icon: "🎥"
+    },
+    {
+      title: "Focused on Local Visibility",
+      description: "Our strategy isn’t about going viral — it’s about making sure your business is seen by the people in your local community who are ready to buy.",
+      icon: "📍"
+    },
+    {
+      title: "Reputation Building",
+      description: "A strong social media presence builds trust. We keep your profiles active and engaging, so your audience sees your business as the go-to choice in your area.",
+      icon: "⭐"
+    },
+    {
+      title: "Save Time & Avoid the Stress",
+      description: "Social media growth doesn’t happen overnight. But with consistent, quality posting, your accounts will grow steadily — and so will your brand.",
+      icon: "🤖"
+    }
+  ],
+  benefits: [
+    {
+      title: "Your Customers See You Everywhere",
+      description: "The more often people see your business online, the more they’ll trust you. And when they need your service? Guess who they’ll call.",
+      icon: "🤝"
+    },
+    {
+      title: "Save Time & Avoid the Stress",
+      description: "No more stressing about what to post or when to post it. We take care of it — so you can focus on running your business.",
+      icon: "⏰"
+    },
+    {
+      title: "Steady Growth Without the Guesswork",
+      description: "Social media growth doesn’t happen overnight. But with consistent, quality posting, your accounts will grow steadily — and so will your brand.",
+      icon: "📈"
+    },
+    {
+      title: "More Engagement = More Business",
+      description: "We turn social media views into real leads by building trust and keeping your business top of mind.",
+      icon: "📞"
+    }
+  ],
+  processSteps: [
+    {
+      title: "Custom Content Plan",
+      description: "We create a content strategy tailored to your business and audience. No cookie-cutter posts — everything is designed to resonate with your local market.",
+      icon: "📝"
+    },
+    {
+      title: "Multi-Platform Posting",
+      description: "We handle posting on all major platforms — Facebook, Instagram, YouTube, Google Business, and more. Your business stays visible everywhere your customers are looking.",
+      icon: "📲"
+    },
+    {
+      title: "Video Content Creation",
+      description: "We turn simple photos and videos into engaging content that builds trust and drives inquiries. Video content gets the best reach — and we make sure it works for you.",
+      icon: "🎥"
+    },
+    {
+      title: "Reputation Building",
+      description: "We manage your profiles to build trust with your audience. Engaging posts, helpful content, and a consistent presence make your business the go-to in your area.",
+      icon: "⭐"
+    },
+    {
+      title: "Ongoing Monitoring & Adjustments",
+      description: "We continuously track your social media performance and make adjustments to improve results over time.",
+      icon: "📊"
+    }
+  ],
+  testimonials: [
+    {
+      name: "Mike Chen",
+      role: "Manager",
+      company: "Golden Dragon Restaurant",
+      content: "We’ve seen a huge increase in engagement since we started working with Virsa Labs. People mention our social media all the time — it’s been a game-changer for building trust.",
+      image: "/testimonials/mike.jpg"
+    },
+    {
+      name: "Sarah Johnson",
+      role: "Owner",
+      company: "Bright Smile Dental",
+      content: "I used to hate dealing with social media. Now, it’s completely hands-off for me, and I’ve noticed more people reaching out. I wish I had done this sooner.",
+      image: "/testimonials/sarah.jpg"
+    },
+    {
+      name: "Carlos Garcia",
+      role: "Manager",
+      company: "Garcia Landscaping",
+      content: "Our social media presence has never been stronger. We’ve gotten more inquiries, and it’s all thanks to Virsa Labs. They make it so easy.",
+      image: "/testimonials/carlos.jpg"
+    }
+  ],
+  faq: [
+    {
+      question: "How often do you post?",
+      answer: "We post regularly across multiple platforms — usually 4-6 posts per week, depending on your plan. The goal is consistent, steady growth without overwhelming your audience."
+    },
+    {
+      question: "Do I need to create the content?",
+      answer: "You don’t need to be a content creator. We’ll guide you on how to capture simple photos and videos from your daily business. We handle the rest."
+    },
+    {
+      question: "Will I see immediate results?",
+      answer: "Social media is about long-term visibility and trust. While some posts may go viral, the real value comes from consistent posting that builds your brand over time."
+    },
+    {
+      question: "What platforms do you post on?",
+      answer: "We cover all major platforms — including Facebook, Instagram, YouTube, and Google Business — to ensure maximum visibility for your business."
+    },
+    {
+      question: "How will I know if it’s working?",
+      answer: "We track key metrics like engagement, reach, and new leads so you can see exactly how your social media presence is growing."
+    }
+  ],
+  niches: [
+    { title: "Roofers", href: "/niches/digital-marketing-for-roofers" },
+    { title: "Movers", href: "/niches/marketing-solutions-for-movers" },
+    { title: "Cleaning Services", href: "/niches/digital-marketing-for-cleaning-services" },
+    { title: "Detailers", href: "/niches/auto-detailing-marketing-solutions" },
+    { title: "Handymen", href: "/niches/digital-marketing-for-handyman-services" },
+    { title: "Mobile Truck Repair ", href: "/niches/mobile-truck-repair-marketing-services" },
+  ],
+  locations: [
+    { title: "Bethlehem PA", href: "/locations/digital-marketing-bethlehem-pa" },
+    { title: "Allentown PA", href: "/locations/digital-marketing-allentown-pa" },
+    { title: "Trenton NJ", href: "/locations/digital-marketing-trenton-nj" },
+    { title: "Philadelphia PA", href: "/locations/digital-marketing-philadelphia-pa" },
+    { title: "Easton PA", href: "/locations/digital-marketing-easton-pa" },
+    { title: "Newark NJ", href: "/locations/digital-marketing-newark-nj" },
+  ],
+  }
+---
+
+<Layout title="Review Management - Virsa Labs">
+  <ServicePageLayout client:load {...pageData} />
+</Layout> 

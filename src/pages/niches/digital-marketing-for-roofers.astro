@@ -1,0 +1,120 @@
+---
+import Layout from "../../layouts/Layout.astro"
+import BlogLayout from "../../components/BlogLayout"
+
+const post = {
+  title: "Digital Marketing for Roofers",
+  description: "How we help Roofers get more recurring customers and manage them",
+  content: `
+  <div class="space-y-12">
+    <!-- Introduction Section -->
+    <section class="space-y-6">
+      <h2 class="text-3xl font-bold text-foreground">The Roofing Industry Has Changed — Your Marketing Needs to Keep Up</h2>
+      <p class="text-lg leading-relaxed">Roofing is a <strong>high-ticket service</strong>, and competition is tougher than ever. Homeowners spend weeks researching contractors, comparing quotes, and reading reviews before they even consider picking up the phone. To stay ahead, you need more than just word-of-mouth referrals — you need a comprehensive <strong>digital marketing strategy</strong> that puts your business front and center when homeowners are searching for roofing services.</p>
+      <p class="text-lg leading-relaxed">At Virsa Labs, we’ve helped roofing businesses in locations like <a href="/locations/digital-marketing-philadelphia-pa" class="text-primary hover:underline">Philadelphia, PA</a>, <a href="/locations/digital-marketing-bethlehem-pa" class="text-primary hover:underline">Bethlehem, PA</a>, and <a href="/locations/digital-marketing-newark-nj" class="text-primary hover:underline">Newark, NJ</a> grow their businesses with <strong>Local SEO</strong>, <strong>PPC Campaigns</strong>, and <strong>Business Automations</strong> that bring in leads, build trust, and close more deals.</p>
+    </section>
+
+    <!-- Section 1: Your Website is the Foundation of Your Roofing Business -->
+    <section class="space-y-6">
+      <h2 class="text-3xl font-bold text-foreground flex items-center gap-3">
+        <span class="flex items-center justify-center w-8 h-8 rounded-full bg-primary/10 text-primary text-lg">1</span>
+        Your Website is the Foundation of Your Roofing Business
+      </h2>
+      <p class="text-lg leading-relaxed">Before homeowners ever call you, they’re <strong>checking your website</strong>. If your website is outdated, slow, or lacks essential information, you’re losing leads to competitors. In roofing, <strong>your website is your most powerful sales tool</strong>, and it needs to work hard to convert visitors into paying customers.</p>
+      <p class="text-lg leading-relaxed">Our <a href="/services/website-seo" class="text-primary hover:underline">Website SEO</a> services ensure your site ranks high on Google, loads fast, and includes all the features homeowners expect to see, like:</p>
+      <ul class="grid gap-4 pl-6">
+        <li class="flex items-start gap-3">
+          <svg class="w-6 h-6 text-primary mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+          </svg>
+          <span>Service pages optimized for your local area</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <svg class="w-6 h-6 text-primary mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+          </svg>
+          <span>Built-in review and testimonial sections to build trust</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <svg class="w-6 h-6 text-primary mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+          </svg>
+          <span>Clear calls-to-action that drive inquiries and bookings</span>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Section 2: Local SEO — Get Found by Homeowners in Your Area -->
+    <section class="space-y-6">
+      <h2 class="text-3xl font-bold text-foreground flex items-center gap-3">
+        <span class="flex items-center justify-center w-8 h-8 rounded-full bg-primary/10 text-primary text-lg">2</span>
+        Local SEO — Get Found by Homeowners in Your Area
+      </h2>
+      <p class="text-lg leading-relaxed">When homeowners search for <strong>"roofing contractors near me,"</strong> you need to be the first name they see. Our <a href="/services/local-seo" class="text-primary hover:underline">Local SEO</a> services help you <strong>dominate local search results</strong>, ensuring your business appears in the <strong>Google Map Pack</strong>, where most roofing leads come from.</p>
+      <p class="text-lg leading-relaxed">We’ve helped roofing companies in <a href="/locations/digital-marketing-trenton-nj" class="text-primary hover:underline">Trenton, NJ</a>, <a href="/locations/digital-marketing-allentown-pa" class="text-primary hover:underline">Allentown, PA</a>, and other areas <strong>outrank their competitors</strong> and attract more qualified leads.</p>
+    </section>
+
+    <!-- Section 3: PPC Advertising — Get Roofing Leads Fast -->
+    <section class="space-y-6">
+      <h2 class="text-3xl font-bold text-foreground flex items-center gap-3">
+        <span class="flex items-center justify-center w-8 h-8 rounded-full bg-primary/10 text-primary text-lg">3</span>
+        PPC Advertising — Get Roofing Leads Fast
+      </h2>
+      <p class="text-lg leading-relaxed">Need results <strong>right now</strong>? Our <a href="/services/ppc-management" class="text-primary hover:underline">PPC (Pay-Per-Click) advertising</a> campaigns get your roofing business in front of <strong>high-intent customers</strong> who are actively searching for services.</p>
+      <p class="text-lg leading-relaxed">We create <strong>geo-targeted campaigns</strong> that ensure you’re only paying for leads in your service areas, maximizing your return on investment. Every dollar you spend is tracked and optimized for the highest conversion rates.</p>
+    </section>
+
+    <!-- Section 4: Automations — Turn More Leads into Jobs -->
+    <section class="space-y-6">
+      <h2 class="text-3xl font-bold text-foreground flex items-center gap-3">
+        <span class="flex items-center justify-center w-8 h-8 rounded-full bg-primary/10 text-primary text-lg">4</span>
+        Automations — Turn More Leads into Jobs
+      </h2>
+      <p class="text-lg leading-relaxed">Roofing businesses lose leads when they don’t follow up quickly. Our <a href="/services/business-automations" class="text-primary hover:underline">Business Automations</a> ensure you never lose a lead again. We automate everything from <strong>review requests</strong> to <strong>appointment reminders</strong> and <strong>follow-up messages</strong>, keeping potential customers engaged and moving them closer to booking.</p>
+      <p class="text-lg leading-relaxed">With automations, you’ll save time and ensure every lead is <strong>handled professionally and promptly</strong>, increasing your chances of closing more jobs.</p>
+    </section>
+
+    <!-- Section 5: Lead Nurturing and Conversion Tracking -->
+    <section class="space-y-6">
+      <h2 class="text-3xl font-bold text-foreground flex items-center gap-3">
+        <span class="flex items-center justify-center w-8 h-8 rounded-full bg-primary/10 text-primary text-lg">5</span>
+        Lead Nurturing and Conversion Tracking
+      </h2>
+      <p class="text-lg leading-relaxed"><strong>More roofing leads don’t always equal more jobs</strong>. The key is <strong>nurturing your leads</strong> and tracking their progress from inquiry to sale. Our CRM tools and automations help you <strong>track every lead</strong>, ensuring no potential job slips through the cracks.</p>
+      <p class="text-lg leading-relaxed">We provide insights into <strong>which marketing channels are working best</strong>, so you can focus your budget on what delivers the highest return.</p>
+    </section>
+
+    <!-- Conclusion -->
+    <section class="space-y-6 bg-primary/5 rounded-xl p-8">
+      <h2 class="text-3xl font-bold text-foreground">Conclusion</h2>
+      <p class="text-lg leading-relaxed">For roofing businesses, <strong>every extra job can mean thousands of dollars in revenue</strong>. At Virsa Labs, we help roofers grow their businesses with <strong>Local SEO</strong>, <strong>PPC</strong>, and <strong>Business Automations</strong> that turn visitors into leads and leads into paying customers.</p>
+      <p class="text-lg leading-relaxed">Ready to take your roofing business to the next level? <strong>Let’s get started.</strong></p>
+    </section>
+  </div>
+`
+
+
+
+,
+  author: {
+    name: "Harjot Dehal",
+    role: "Founder & SEO Expert",
+    image: "/Virsa (3).png"
+  },
+  date: "january 15, 2025",
+  readTime: "8 min read",
+  category: "SEO",
+  image: "/roofers-image.png",
+  slug: "boost-google-business-profile-rankings"
+}
+---
+
+<Layout title={`${post.title} - Virsa Labs Blog`}>
+  <BlogLayout 
+    client:load
+    title={post.title}
+    description={post.description}
+    post={post}
+    isSinglePost={true}
+  />
+</Layout> 

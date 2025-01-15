@@ -1,0 +1,156 @@
+---
+import Layout from "../../layouts/Layout.astro"
+import ServicePageLayout from "../../components/ServicePageLayout"
+
+const pageData = {
+  title: "Local SEO",
+  subtitle: "Get Found, Get Calls, Get Paid.",
+  description: "If your business isn’t showing up in the top 3 Google results, you’re missing out on easy money. We’ll fix that. Our Local SEO service puts your business right where your customers are looking — and keeps your phone ringing.",
+  features: [
+    {
+      title: "Top 3 Google Map Pack Rankings",
+      description: "We make sure your business shows up in the top 3 spots on Google when people search for your services locally. This is where 70% of local clicks go — and where you need to be.",
+      icon: "📍"
+    },
+    {
+      title: "Full Google Business Profile Optimization",
+      description: "Your Google Business Profile is your most valuable online asset. We optimize everything — from photos to business details, reviews, and posts — to make your profile stand out and convert more customers.",
+      icon: "⚙️"
+    },
+    {
+      title: "Keyword Targeting That Brings In Paying Customers",
+      description: "We don’t chase vanity keywords. We focus on high-intent, local search terms that actually bring in calls, bookings, and foot traffic.",
+      icon: "🔑"
+    },
+    {
+      title: "Review Management & Reputation ",
+      description: "We help you get more 5-star reviews, respond to customers, and build trust with your audience. A well-managed reputation makes you the obvious choice in your area.",
+      icon: "⭐"
+    },
+    {
+      title: "Competitor Analysis & Strategy",
+      description: "We analyze your local competition and create a custom strategy to outrank them. Our goal? Make your business the go-to in your niche.",
+      icon: "🏆"
+    },
+    {
+      title: "More Customers, More Calls, More Sales",
+      description: "Ranking in the top 3 on Google means more visibility, more calls, and more business. It’s that simple.",
+      icon: "📈"
+    }
+  ],
+  benefits: [
+    {
+      title: "More Customers, More Calls, More Sales",
+      description: "Ranking in the top 3 on Google means more visibility, more calls, and more business. It’s that simple.",
+      icon: "🤝"
+    },
+    {
+      title: "Market Exclusivity",
+      description: "We only partner with one business per niche in your area. You won’t be competing with other clients — you get full market domination.",
+      icon: "🤝"
+    },
+    {
+      title: "Built-In Trust & Credibility",
+      description: "People trust the top 3 businesses on Google more than any ad. Showing up there makes you the obvious choice and builds instant credibility.",
+      icon: "⭐"
+    },
+    {
+      title: "Long-Term ROI Without Ongoing Ad Spend",
+      description: "Unlike paid ads, Local SEO keeps delivering results without a constant budget. You’ll keep getting leads month after month.",
+      icon: "💰"
+    }
+  ],
+  processSteps: [
+    {
+      title: "Initial Audit",
+      description: "We start by analyzing your current Google presence and identifying opportunities for quick wins.",
+      icon: "🔍"
+    },
+    {
+      title: "Custom Strategy Development",
+      description: "We build a tailored Local SEO strategy based on your business goals and your local competition.",
+      icon: "📋"
+    },
+    {
+      title: "Profile Optimization",
+      description: "We optimize every part of your Google Business Profile — photos, categories, descriptions, and more — to ensure you stand out.",
+      icon: "⚙️"
+    },
+    {
+      title: "Content Creation & Engagement",
+      description: "We post updates, offers, and promotions to keep your profile fresh and engaging for potential customers.",
+      icon: "✍️"
+    },
+    {
+      title: "Monitoring & Adjustment",
+      description: "SEO isn’t a one-and-done thing. We continuously track your performance and make adjustments to keep you in the top spots.",
+      icon: "📈"
+    }
+  ],
+  testimonials: [
+    {
+      name: "Sarah Johnson",
+      role: "Owner",
+      company: "Bright Smile Dental",
+      content: "Since working with Virsa Labs, our dental practice has seen a 200% increase in new patient inquiries. We're now consistently ranking in the top 3 for all our target keywords!",
+      image: "/testimonials/sarah.jpg"
+    },
+    {
+      name: "Mike Chen",
+      role: "Manager",
+      company: "Golden Dragon Restaurant",
+      content: "Our restaurant's online visibility has skyrocketed. We're getting more reservations than ever, and our Google profile looks amazing!",
+      image: "/testimonials/mike.jpg"
+    },
+    {
+      name: "Rachel Smith",
+      role: "Director",
+      company: "Elite Fitness",
+      content: "The team at Virsa Labs transformed our online presence. We're now the top-ranked gym in our area and our class bookings have doubled.",
+      image: "/testimonials/rachel.jpg"
+    }
+  ],
+  faq: [
+    {
+      question: "How long will it take to see results?",
+      answer: "Most clients see significant improvements within 2-3 months, but you’ll start seeing positive changes within the first few weeks."
+    },
+    {
+      question: "Do you guarantee first page rankings?",
+      answer: "While we can’t guarantee specific rankings, our proven strategies have helped 90% of our clients achieve top 3 local rankings within 6 months."
+    },
+    {
+      question: "What makes your optimization service different?",
+      answer: "We combine advanced SEO techniques with conversion-focused strategies. We don’t just help you rank higher — we help you turn those searchers into paying customers."
+    },
+    {
+      question: "Do you handle review management?",
+      answer: "Yes! We include review monitoring, response management, and strategies to encourage more positive reviews from satisfied customers."
+    },
+    {
+      question: "How do you measure success?",
+      answer: "We track multiple metrics, including rankings, profile views, clicks, calls, and new customers. You’ll receive regular reports showing exactly how your profile is performing."
+    }
+  ],
+  niches: [
+    { title: "Roofers", href: "/niches/digital-marketing-for-roofers" },
+    { title: "Movers", href: "/niches/marketing-solutions-for-movers" },
+    { title: "Cleaning Services", href: "/niches/digital-marketing-for-cleaning-services" },
+    { title: "Detailers", href: "/niches/auto-detailing-marketing-solutions" },
+    { title: "Handymen", href: "/niches/digital-marketing-for-handyman-services" },
+    { title: "Mobile Truck Repair ", href: "/niches/mobile-truck-repair-marketing-services" },
+  ],
+  locations: [
+    { title: "Bethlehem PA", href: "/locations/digital-marketing-bethlehem-pa" },
+    { title: "Allentown PA", href: "/locations/digital-marketing-allentown-pa" },
+    { title: "Trenton NJ", href: "/locations/digital-marketing-trenton-nj" },
+    { title: "Philadelphia PA", href: "/locations/digital-marketing-philadelphia-pa" },
+    { title: "Easton PA", href: "/locations/digital-marketing-easton-pa" },
+    { title: "Newark NJ", href: "/locations/digital-marketing-newark-nj" },
+  ],
+}
+---
+
+<Layout title="Google Profile Optimization - Virsa Labs">
+  <ServicePageLayout client:load {...pageData} />
+</Layout> 
