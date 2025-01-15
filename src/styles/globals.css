@@ -54,13 +54,14 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 4px 20px;
+  padding: 2px 16px;
   border-radius: 1.25rem;
   background-color: #FF5E00; /* Inner button background color */
   color: #fff;
   font-weight: 600;
   text-align: center;
   transition: transform 0.3s ease;
+  font-size: 13px;
 }
 
 .button-glow:hover .button-glow-inner {
