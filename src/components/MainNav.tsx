@@ -168,7 +168,7 @@ const MainNav = () => {
           </div>
 
           {/* Mobile Menu Button */}
-          <div className="flex md:hidden flex-1 justify-end">
+          <div className="flex md:hidden flex-1 justify-end gap-3">
           <a href="/book-consultation" className="button-glow" aria-label="Schedule a free consultation">
   <div className="button-glow-inner2">
     Book A Call
