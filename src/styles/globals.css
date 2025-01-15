@@ -32,9 +32,9 @@
   display: inline-block;
   border-radius: 0.75rem;
   padding: 2px; /* Thickness of the border */
-  background: linear-gradient(90deg, #FF9100, #FF5E00, #FF9100);
+  background: #FF6E00;
   background-size: 200% 200%;
-  animation: gradient-border 3s linear infinite;
+  /* animation: gradient-border 3s linear infinite; */
 
 }
 
@@ -44,9 +44,9 @@
   display: inline-flex;
   border-radius: 0.75rem;
   padding: 2px; /* Border thickness */
-  background: linear-gradient(90deg, #FF9100, #FF5E00, #FF9100);
+  background: #FF6E00;
   background-size: 200% 200%;
-  animation: gradient-border 3s linear infinite;
+  
 }
 
 
