@@ -39,6 +39,13 @@ const Footer = () => {
                 <span className="sr-only">TikTok</span>
               </a>
             </div>
+
+            <div>
+            <p className="text-sm text-muted-foreground">
+
+            3005 Brodhead Rd STE 23 <br />Bethlehem, PA 18020
+</p>
+            </div>
           </div>
 
           {/* Services */}
@@ -79,6 +86,7 @@ const Footer = () => {
 
         {/* Bottom Bar */}
         <div className="mt-12 pt-8 border-t border-border/10">
+        
           <div className="text-center text-sm text-muted-foreground">
             <p>&copy; {currentYear} Virsa Labs. All rights reserved.</p>
           </div>
