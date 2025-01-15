@@ -257,7 +257,7 @@ const MainNav = () => {
                   className="w-full justify-center  text-white"
                   asChild
                 >
-                  <a href="/contact-us">Book Demo</a>
+                  <a href="/contact-us">Contact Us</a>
                 </Button>
               </div>
             </div>
