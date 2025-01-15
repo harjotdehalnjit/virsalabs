@@ -17,6 +17,44 @@
   }
 }
 
+/* Animated glowing border for the Book A Call button */
+@keyframes gradient-border {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+.button-glow {
+  position: relative;
+  display: inline-block;
+  border-radius: 0.75rem;
+  padding: 2px; /* Thickness of the border */
+  background: linear-gradient(90deg, #FF9100, #FF5E00, #FF9100);
+  background-size: 200% 200%;
+  animation: gradient-border 3s linear infinite;
+}
+
+.button-glow-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 30px;
+  border-radius: 1.25rem;
+  background-color: #FF5E00; /* Inner button background color */
+  color: #fff;
+  font-weight: 600;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.button-glow:hover .button-glow-inner {
+  transform: scale(1.08);
+}
+
+
 /* Typography */
 @layer base {
   h1, h2, h3, h4, h5, h6 {
