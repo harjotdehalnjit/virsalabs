@@ -72,7 +72,7 @@ const Footer = () => {
               Ready to grow your business? Schedule a free consultation today.
             </p>
             <Button asChild>
-              <a href="/contact-us">Book Consultation</a>
+              <a href="/contact-us">Book a Call</a>
             </Button>
           </div>
         </div>
