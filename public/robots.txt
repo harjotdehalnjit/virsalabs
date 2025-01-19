@@ -1,0 +1,16 @@
+User-agent: *
+Allow: /
+Allow: /sitemap.xml
+
+# Sitemaps
+Sitemap: https://www.virsalabs.io/sitemap.xml
+
+# Crawl-delay
+Crawl-delay: 10
+
+# Disallow admin or sensitive paths
+Disallow: /admin/
+Disallow: /private/
+Disallow: /api/
+Disallow: /tmp/
+Disallow: /assets/raw/ 

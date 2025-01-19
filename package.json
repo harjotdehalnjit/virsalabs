@@ -33,6 +33,11 @@
     "three": "^0.172.0"
   },
   "devDependencies": {
-    "@types/locomotive-scroll": "^4.1.4"
+    "@types/locomotive-scroll": "^4.1.4",
+    "@types/node": "^22.10.7",
+    "@types/prettier": "^2.7.3",
+    "globby": "^14.0.2",
+    "prettier": "^3.4.2",
+    "sharp": "^0.33.5"
   }
 }
