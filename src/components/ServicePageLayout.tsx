@@ -252,7 +252,7 @@ const ServicePageLayout: React.FC<ServicePageLayoutProps> = ({
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-20 bg-background" style={{
+      {/* <section className="py-20 bg-background" style={{
 			background: 'radial-gradient(circle at center, rgba(85, 40, 160, 0.76) 0%, rgba(20, 10, 60, 0.9) 55%, transparent 80%)'
 		  }}>
         <div className="container px-4 md:px-6">
@@ -296,7 +296,7 @@ const ServicePageLayout: React.FC<ServicePageLayoutProps> = ({
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* FAQ Section */}
       <section className="py-20 bg-secondary/10" style={{
