@@ -63,6 +63,7 @@ const testimonials: Testimonial[] = [
 const VideoTestimonials = () => {
   const [playingVideo, setPlayingVideo] = useState<number | null>(null);
   const [loadedVideos, setLoadedVideos] = useState<Set<number>>(new Set());
+  const [isTouching, setIsTouching] = useState(false);
   const playerRefs = useRef<(Player | null)[]>([]);
   const containerRefs = useRef<(HTMLDivElement | null)[]>([]);
   const swiperRef = useRef<any>(null);
@@ -76,8 +77,8 @@ const VideoTestimonials = () => {
       responsive: true,
       autoplay: false,
       loop: false,
-      background: false, // Changed from true to false
-      muted: false, // Explicitly set muted to false
+      background: false,
+      muted: false,
       autopause: true,
       speed: true,
       playsinline: true,
@@ -87,10 +88,8 @@ const VideoTestimonials = () => {
     const player = new Player(containerRefs.current[index]!, options);
     playerRefs.current[index] = player;
 
-    // Load the video
     try {
       await player.ready();
-      // Get and set a thumbnail as poster
       const videoData = await player.getVideoTitle();
       if (videoData) {
         setLoadedVideos(prev => new Set([...prev, index]));
@@ -99,7 +98,6 @@ const VideoTestimonials = () => {
       console.error('Error loading video:', error);
     }
 
-    // Add event listeners
     player.on('ended', () => {
       setPlayingVideo(null);
     });
@@ -107,14 +105,12 @@ const VideoTestimonials = () => {
     return player;
   };
 
-  // Preload visible slides
   const preloadVisibleSlides = async () => {
     if (!swiperRef.current) return;
     
     const activeIndex = swiperRef.current.activeIndex;
     const slidesPerView = swiperRef.current.params.slidesPerView;
     
-    // Preload current and next few slides
     for (let i = activeIndex; i < activeIndex + slidesPerView + 1; i++) {
       if (i < testimonials.length && !playerRefs.current[i]) {
         await initializePlayer(i);
@@ -123,9 +119,7 @@ const VideoTestimonials = () => {
   };
 
   useEffect(() => {
-    // Initialize first few videos on mount
     const initializeFirstVideos = async () => {
-      // Initialize first 3 videos (or however many are visible initially)
       for (let i = 0; i < Math.min(3, testimonials.length); i++) {
         await initializePlayer(i);
       }
@@ -144,7 +138,13 @@ const VideoTestimonials = () => {
     setPlayingVideo(null);
   };
 
-  const handleVideoClick = async (index: number) => {
+  const handleVideoClick = async (index: number, event: React.MouseEvent) => {
+    // Prevent video interaction while swiping
+    if (isTouching) {
+      event.preventDefault();
+      return;
+    }
+
     let player = playerRefs.current[index];
     if (!player) {
       player = await initializePlayer(index);
@@ -157,7 +157,7 @@ const VideoTestimonials = () => {
     } else {
       stopAllVideos();
       try {
-        await player.setVolume(1); // Ensure volume is up
+        await player.setVolume(1);
         await player.play();
         setPlayingVideo(index);
       } catch (error) {
@@ -176,7 +176,6 @@ const VideoTestimonials = () => {
     document.addEventListener('visibilitychange', handleVisibilityChange);
     return () => {
       document.removeEventListener('visibilitychange', handleVisibilityChange);
-      // Cleanup players
       playerRefs.current.forEach((player) => {
         if (player) {
           player.destroy();
@@ -185,16 +184,17 @@ const VideoTestimonials = () => {
     };
   }, []);
 
+
   return (
-    <section className=" -translate-y-20 py-4 md:py-8 relative overflow-hidden -mb-20  " style={{
+    <section className=" -translate-y-20 py-4 px-8 md:py-8 relative overflow-hidden -mb-20  " style={{
       background: 'radial-gradient(circle at center, rgba(85, 40, 160, 0.76) 0%, rgba(20, 10, 60, 0.9) 55%, transparent 80%)'
     }}>
-      <div className="container mx-auto px-0 md:px-4  max-w-3xl xl:max-w-4xl 2xl:max-w-5xl"> {/* Added max-w-6xl */}
+      <div className="container mx-auto px-0 md:px-4  max-w-2xl xl:max-w-4xl 2xl:max-w-5xl"> {/* Added max-w-6xl */}
         <div className="text-center mb-4 md:mb-6"> {/* Reduced vertical margins */}
           <div className="inline-block px-3 py-1 mb-2 text-xs md:text-sm font-semibold rounded-full bg-primary/10 text-primary">
             Video Testimonials
           </div>
-          <h2 className="text-xl md:text-3xl font-bold mb-2">Happy Client Reviews</h2>
+          <h2 className="text-3xl md:text-5xl font-bold mb-2">Happy Client Reviews</h2>
           <p className="text-sm md:text-base text-muted-foreground">Don't just take our word for it...</p>
         </div>
 
