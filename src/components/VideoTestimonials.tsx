@@ -202,10 +202,16 @@ const VideoTestimonials = () => {
 
         <div className="mx-auto testimonials-slider relative">
        
-          
+        <button 
+            onClick={() => swiperRef.current?.slidePrev()}
+            className="absolute left-0 top-1/2 -translate-y-1/2 z-20 md:hidden bg-primary/90 text-white p-1 rounded-r-lg"
+            aria-label="Previous slide"
+          >
+            <ChevronLeft className="w-2 h-4" />
+          </button>
           <button 
             onClick={() => swiperRef.current?.slideNext()}
-            className="absolute right-0 top-1/2 -translate-y-1/2 z-20 md:hidden bg-primary/90 text-white p-2 rounded-l-lg"
+            className="absolute right-0 top-1/2 -translate-y-1/2 z-20 md:hidden bg-primary/90 text-white p-1 rounded-l-lg"
             aria-label="Next slide"
           >
             <ChevronRight className="w-2 h-4" />
