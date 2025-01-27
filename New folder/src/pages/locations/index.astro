@@ -1,0 +1,102 @@
+---
+import Layout from "../../layouts/Layout.astro"
+import BlogLayout from "../../components/BlogLayout"
+import LocationLayout from "../../components/LocationLayout"
+
+const locations = [
+  {
+    title: "Digital Marketing Services in Allentown, PA",
+    description: "Grow your business in Allentown with our full-service digital marketing solutions, including local SEO, Google Business Profile optimization, and business automation tools.",
+    author: {
+      name: "Virsa Labs Team",
+      role: "Local SEO Experts",
+      image: "/Virsa (3).png"
+    },
+    date: "Updated Jan 2025",
+    readTime: "Serving Allentown Businesses",
+    category: "Local SEO",
+    image: "/Allentown-pa-buildings.png",
+    slug: "digital-marketing-allentown-pa"
+  },
+  {
+    title: "Digital Marketing & SEO in Bethlehem, PA",
+    description: "Helping businesses in Bethlehem dominate local search with proven digital marketing strategies. From social media management to automated lead follow-ups, we've got you covered.",
+    author: {
+      name: "Virsa Labs Team",
+      role: "Local Marketing Pros",
+      image: "/Virsa (3).png"
+    },
+    date: "Updated Jan 2025",
+    readTime: "Serving Bethlehem Businesses",
+    category: "Digital Marketing",
+    image: "/bethlehem-pa-view.png",
+    slug: "digital-marketing-bethlehem-pa"
+  },
+  {
+    title: "Trenton, NJ Digital Marketing Experts",
+    description: "Drive more leads and revenue in Trenton with our local SEO, Google Ads management, and business automation services. We help businesses stand out in their local market.",
+    author: {
+      name: "Virsa Labs Team",
+      role: "Marketing Specialists",
+      image: "/Virsa (3).png"
+    },
+    date: "Updated Jan 2025",
+    readTime: "Serving Trenton Businesses",
+    category: "SEO & PPC",
+    image: "/trenton-nj-image.png",
+    slug: "digital-marketing-trenton-nj"
+  },
+  {
+    title: "Philadelphia Digital Marketing & SEO Services",
+    description: "Take your business to the next level in Philadelphia with our comprehensive digital marketing services. Get found online and convert more leads with our proven strategies.",
+    author: {
+      name: "Virsa Labs Team",
+      role: "SEO & Marketing Experts",
+      image: "/Virsa (3).png"
+    },
+    date: "Updated Jan 2025",
+    readTime: "Serving Philadelphia Businesses",
+    category: "Marketing",
+    image: "/philidelphia-pa-streets.png",
+    slug: "digital-marketing-philadelphia-pa"
+  },
+  {
+    title: "Local Digital Marketing Services in Easton, PA",
+    description: "We help Easton businesses improve their online presence with local SEO, social media management, and Google Business Profile optimization.",
+    author: {
+      name: "Virsa Labs Team",
+      role: "Business Growth Experts",
+      image: "/Virsa (3).png"
+    },
+    date: "Updated Jan 2025",
+    readTime: "Serving Easton Businesses",
+    category: "Local SEO",
+    image: "/easton-pa-water-image.png",
+    slug: "digital-marketing-easton-pa"
+  },
+  {
+    title: "Digital Marketing Solutions for Newark, NJ Businesses",
+    description: "Our Newark digital marketing services include local SEO, paid ads management, and business automation to help you grow your customer base and save time.",
+    author: {
+      name: "Virsa Labs Team",
+      role: "Growth Partners",
+      image: "/Virsa (3).png"
+    },
+    date: "Updated Jan 2025",
+    readTime: "Serving Newark Businesses",
+    category: "Business Automation",
+    image: "/newark-nj-skyline.png",
+    slug: "digital-marketing-newark-nj"
+  }
+]
+
+---
+
+<Layout title="Locations - Virsa Labs">
+  <LocationLayout 
+    client:load
+    title="Cities We Serve"
+    description="Explore the cities we serve with our digital marketing, local SEO, and business automation services. From Allentown to Newark, we're helping local businesses grow"
+    posts={locations}
+  />
+</Layout> 

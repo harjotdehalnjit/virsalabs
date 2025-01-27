@@ -1,0 +1,172 @@
+import { useState, useRef, useEffect } from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Pagination } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+
+interface Testimonial {
+  name: string;
+  company: string;
+  videoUrl: string;
+  rating: number;
+}
+
+const testimonials: Testimonial[] = [
+  {
+    name: "Scott",
+    company: "Trustifi",
+    videoUrl: "/review-1.webm",
+    rating: 5,
+  },
+  {
+    name: "Raymond",
+    company: "Drone Videos",
+    videoUrl: "/review-2.webm",
+    rating: 5,
+  },
+  {
+    name: "Dr. Stuart",
+    company: "Breslow Plastic Surgery",
+    videoUrl: "/review-3.webm",
+    rating: 5,
+  },
+  {
+    name: "John Smith",
+    company: "Digital Solutions",
+    videoUrl: "/review-4.webm",
+    rating: 5,
+  }
+];
+
+const VideoTestimonials = () => {
+  const [playingVideo, setPlayingVideo] = useState<number | null>(null);
+  const videoRefs = useRef<(HTMLVideoElement | null)[]>([]);
+
+  const stopAllVideos = () => {
+    videoRefs.current.forEach((videoRef) => {
+      if (videoRef) {
+        videoRef.pause();
+        videoRef.currentTime = 0;
+      }
+    });
+    setPlayingVideo(null);
+  };
+
+  const handleVideoClick = (index: number) => {
+    const videoRef = videoRefs.current[index];
+    if (!videoRef) return;
+
+    if (playingVideo === index) {
+      videoRef.pause();
+      setPlayingVideo(null);
+    } else {
+      stopAllVideos();
+      videoRef.play();
+      setPlayingVideo(index);
+    }
+  };
+
+  useEffect(() => {
+    const handleVisibilityChange = () => {
+      if (document.hidden) {
+        stopAllVideos();
+      }
+    };
+
+    document.addEventListener('visibilitychange', handleVisibilityChange);
+    return () => {
+      document.removeEventListener('visibilitychange', handleVisibilityChange);
+    };
+  }, []);
+
+  return (
+    <section className="py-6 md:py-12 relative overflow-hidden mb-16 md:mb-24" style={{
+      background: 'radial-gradient(circle at center, rgba(85, 40, 160, 0.76) 0%, rgba(20, 10, 60, 0.9) 55%, transparent 80%)'
+    }}>
+      <div className="container px-4 md:px-6 mx-auto">
+        <div className="text-center mb-6 md:mb-8">
+          <div className="inline-block px-3 py-1 mb-2 md:mb-3 text-xs md:text-sm font-semibold rounded-full bg-primary/10 text-primary">
+            Video Testimonials
+          </div>
+          <h2 className="text-2xl md:text-4xl font-bold mb-2">Happy Client Reviews</h2>
+          <p className="text-sm md:text-lg text-muted-foreground">Don't just take our word for it...</p>
+        </div>
+
+        <div className="max-w-[1200px] mx-auto testimonials-slider">
+          <Swiper
+            modules={[Navigation, Pagination]}
+            spaceBetween={16}
+            slidesPerView={1}
+            navigation
+            pagination={{ 
+              clickable: true,
+              el: '.testimonials-pagination'
+            }}
+            breakpoints={{
+              640: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+              },
+              1024: {
+                slidesPerView: 3,
+                spaceBetween: 24,
+              },
+            }}
+            onSlideChange={stopAllVideos}
+            className="!pb-10 md:!pb-12"
+          >
+            {testimonials.map((testimonial, index) => (
+              <SwiperSlide key={index} className="pb-4">
+                <div className="relative rounded-xl overflow-hidden group">
+                  <div className="relative aspect-[4/3]">
+                    <video
+                      ref={(el) => {
+                        videoRefs.current[index] = el;
+                      }}
+                      src={testimonial.videoUrl}
+                      className="absolute inset-0 w-full h-full object-cover"
+                      playsInline
+                      onClick={() => handleVideoClick(index)}
+                    />
+                    {/* Gradient overlay */}
+                    <div className="absolute inset-0 bg-gradient-to-b from-black/0 via-black/20 to-black/90" />
+                    
+                    {/* Play button */}
+                    {playingVideo !== index && (
+                      <button 
+                        className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10 group-hover:scale-110 transition-transform duration-300"
+                        onClick={() => handleVideoClick(index)}
+                      >
+                        <div className="w-10 h-10 md:w-12 md:h-12 flex items-center justify-center rounded-full bg-primary text-white shadow-lg">
+                          <svg className="w-5 h-5 md:w-6 md:h-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M8 5v14l11-7z" />
+                          </svg>
+                        </div>
+                      </button>
+                    )}
+
+                    {/* Text overlay */}
+                    <div className="absolute bottom-0 left-0 right-0 p-4 text-white z-10">
+                      <div className="space-y-1">
+                        <h3 className="text-sm font-bold leading-tight">{testimonial.name}</h3>
+                        <p className="text-xs text-white/90 leading-tight">{testimonial.company}</p>
+                        <div className="flex text-[10px] text-primary pt-0.5">
+                          {"⭐".repeat(testimonial.rating)}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+          {/* Custom pagination container */}
+          <div className="testimonials-pagination flex justify-center gap-2 mt-4" />
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default VideoTestimonials; 

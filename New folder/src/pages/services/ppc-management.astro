@@ -1,0 +1,157 @@
+---
+import Layout from "../../layouts/Layout.astro"
+import ServicePageLayout from "../../components/ServicePageLayout"
+
+const pageData = {
+  title: "PPC Management",
+  subtitle: "Stop Wasting Ad Spend — Start Generating Real Leads",
+  description: "Running ads without a solid strategy is like throwing money into a black hole. Our PPC Management service ensures every dollar you spend brings in quality leads, with a focus on maximizing ROI and minimizing wasted budget.",
+  features: [
+    {
+      title: "Google Ads Campaign Setup & Management",
+      description: "We create and manage high-performing Google Ads campaigns that target the right people at the right time — when they’re actively searching for your services.",
+      icon: "🔍"
+    },
+    {
+      title: "Local Services Ads (LSA) Management",
+      description: "We handle your Google Local Services Ads, ensuring you show up at the top of search results and only pay for qualified leads.",
+      icon: "📌"
+    },
+    {
+      title: "Custom Ad Copy & Creative",
+      description: "We write compelling ad copy and design creatives that drive clicks and conversions. No fluff — just results.",
+      icon: "✍️"
+    },
+    {
+      title: "Budget Optimization",
+      description: "We manage your ad spend like it’s our own money, ensuring you get the highest return on investment by adjusting bids and budgets in real-time.",
+      icon: "💰"
+    },
+    {
+      title: "Take the Guesswork Out of Ads",
+      description: "Stop wondering if your ads are working. We provide clear reports showing exactly how much business your campaigns are bringing in.",
+      icon: "📊"
+    },
+    {
+      title: "Save Time & Focus on Your Business",
+      description: "We handle the entire process — from setup to optimization. You focus on running your business while we make sure your phone keeps ringing.",
+      icon: "🔄"
+    }
+  ],
+  benefits: [
+    {
+      title: "Get High-Quality Leads, Fast",
+      description: "We drive immediate, qualified leads to your business — no waiting months to see results.",
+      icon: "🚀"
+    },
+    {
+      title: "Maximize Your ROI",
+      description: "We ensure every dollar you spend works harder by targeting high-intent customers and optimizing your budget.",
+      icon: "📈"
+    },
+    {
+      title: "Take the Guesswork Out of Ads",
+      description: "Stop wondering if your ads are working. We provide clear reports showing exactly how much business your campaigns are bringing in.",
+      icon: "🧩"
+    },
+    {
+      title: "Save Time & Focus on Your Business",
+      description: "We handle the entire process — from setup to optimization. You focus on running your business while we make sure your phone keeps ringing.",
+      icon: "⏰"
+    }
+  ],
+  processSteps: [
+    {
+      title: "Initial Audit & Strategy",
+      description: "We start by auditing your current ad efforts and identifying gaps. Then we build a custom PPC strategy tailored to your business goals.",
+      icon: "🔍"
+    },
+    {
+      title: "Campaign Setup",
+      description: "We create highly targeted campaigns on Google and Local Services Ads (LSA) to ensure you’re reaching the right audience.",
+      icon: "⚙️"
+    },
+    {
+      title: "Ad Copy & Creative",
+      description: "We craft compelling ad copy and design creatives that drive clicks and conversions.",
+      icon: "✍️"
+    },
+    {
+      title: "Ongoing Optimization",
+      description: "We continuously monitor and tweak your campaigns to maximize performance and ensure your budget is being spent efficiently.",
+      icon: "📈"
+    },
+    {
+      title: "Reporting & Performance Reviews",
+      description: "You’ll get regular reports showing how your campaigns are performing and what results you’re getting — no confusing data, just clear numbers.",
+      icon: "📊"
+    }
+  ],
+  testimonials: [
+    {
+      name: "Tom Richards",
+      role: "Owner",
+      company: "Richards Plumbing",
+      content: "Virsa Labs turned our Google Ads from a money pit into a lead machine. We’re getting more calls than ever, and our cost per lead has dropped by 40%.",
+      image: "/testimonials/tom.jpg"
+    },
+    {
+      name: "Sara Jones",
+      role: "CEO",
+      company: "Jones Law Firm",
+      content: "We’ve worked with other agencies before, but none have come close to the results we’ve seen with Virsa Labs. They know how to make your ads actually work.",
+      image: "/testimonials/sara.jpg"
+    },
+    {
+      name: "Carlos Garcia",
+      role: "Manager",
+      company: "Garcia Landscaping",
+      content: "Our Local Services Ads are bringing in more business than we ever expected. Virsa Labs made the whole process seamless and stress-free.",
+      image: "/testimonials/carlos.jpg"
+    }
+  ],
+  faq: [
+    {
+      question: "What platforms do you manage PPC campaigns on?",
+      answer: "We specialize in Google Ads and Google Local Services Ads (LSA). These platforms are proven to deliver the highest ROI for local businesses."
+    },
+    {
+      question: "How long does it take to see results?",
+      answer: "You’ll start seeing leads within the first week of launching your campaigns. Our ongoing optimizations ensure those results keep improving over time."
+    },
+    {
+      question: "Do you handle ad copy and creatives?",
+      answer: "Yes! We take care of everything, including writing compelling ad copy, designing creatives, and split-testing different variations to see what performs best."
+    },
+    {
+      question: "How do you track the success of my campaigns?",
+      answer: "We track every phone call, message, and form submission that comes from your ads. You’ll know exactly how much business your campaigns are generating."
+    },
+    {
+      question: "Is there a minimum budget required?",
+      answer: "We recommend a minimum monthly ad budget of $500 to see meaningful results. However, we’ll work with you to determine the best budget for your goals."
+    }
+  ],
+  niches: [
+    { title: "Roofers", href: "/niches/digital-marketing-for-roofers" },
+    { title: "Movers", href: "/niches/marketing-solutions-for-movers" },
+    { title: "Cleaning Services", href: "/niches/digital-marketing-for-cleaning-services" },
+    { title: "Detailers", href: "/niches/auto-detailing-marketing-solutions" },
+    { title: "Handymen", href: "/niches/digital-marketing-for-handyman-services" },
+    { title: "Mobile Truck Repair ", href: "/niches/mobile-truck-repair-marketing-services" },
+  ],
+  locations: [
+    { title: "Bethlehem PA", href: "/locations/digital-marketing-bethlehem-pa" },
+    { title: "Allentown PA", href: "/locations/digital-marketing-allentown-pa" },
+    { title: "Trenton NJ", href: "/locations/digital-marketing-trenton-nj" },
+    { title: "Philadelphia PA", href: "/locations/digital-marketing-philadelphia-pa" },
+    { title: "Easton PA", href: "/locations/digital-marketing-easton-pa" },
+    { title: "Newark NJ", href: "/locations/digital-marketing-newark-nj" },
+  ],
+}
+
+---
+
+<Layout title="PPC Management - Virsa Labs">
+  <ServicePageLayout client:load {...pageData} />
+</Layout> 

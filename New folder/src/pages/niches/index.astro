@@ -1,0 +1,101 @@
+---
+import Layout from "../../layouts/Layout.astro"
+import BlogLayout from "../../components/BlogLayout"
+import NicheLayout from "../../components/NicheLayout"
+const niches = [
+  {
+    title: "Digital Marketing for Roofers",
+    description: "We help roofing businesses get more leads and close more jobs with targeted local SEO, Google Business Profile optimization, and automated follow-ups.",
+    author: {
+      name: "Virsa Labs Team",
+      role: "Roofing Marketing Experts",
+      image: "/Virsa (3).png"
+    },
+    date: "Updated Jan 2025",
+    readTime: "Roofing Niches",
+    category: "Local SEO",
+    image: "/roofers-image.png",
+    slug: "digital-marketing-for-roofers"
+  },
+  {
+    title: "Marketing Solutions for Movers",
+    description: "Our digital marketing services for movers include lead generation, automated booking systems, and reputation management to keep your trucks moving.",
+    author: {
+      name: "Virsa Labs Team",
+      role: "Mover Marketing Specialists",
+      image: "/Virsa (3).png"
+    },
+    date: "Updated Jan 2025",
+    readTime: "Moving Niches",
+    category: "Marketing",
+    image: "/movers-image.png",
+    slug: "digital-marketing-for-movers"
+  },
+  {
+    title: "Digital Marketing for Cleaning Services",
+    description: "Boost your cleaning business with our automated lead management, local SEO, and Google Business Profile optimization. Turn inquiries into regular clients.",
+    author: {
+      name: "Virsa Labs Team",
+      role: "Cleaning Business Pros",
+      image: "/Virsa (3).png"
+    },
+    date: "Updated Jan 2025",
+    readTime: "Cleaning Niches",
+    category: "Business Automation",
+    image: "/cleaners-image.png",
+    slug: "digital-marketing-for-cleaning-services"
+  },
+  {
+    title: "Auto Detailing Marketing Solutions",
+    description: "We specialize in helping auto detailing businesses stand out online with local SEO, social media management, and automated customer follow-ups.",
+    author: {
+      name: "Virsa Labs Team",
+      role: "Detailing Marketing Pros",
+      image: "/Virsa (3).png"
+    },
+    date: "Updated Jan 2025",
+    readTime: "Detailing Niches",
+    category: "Social Media",
+    image: "/detailers-image.png",
+    slug: "digital-marketing-for-detailers"
+  },
+  {
+    title: "Digital Marketing for Handyman Services",
+    description: "Our marketing services for handymen include local SEO, automated review requests, and lead follow-up systems to keep your schedule full.",
+    author: {
+      name: "Virsa Labs Team",
+      role: "Handyman Growth Experts",
+      image: "/Virsa (3).png"
+    },
+    date: "Updated Jan 2025",
+    readTime: "Handyman Niches",
+    category: "Local SEO",
+    image: "/handyman-image.png",
+    slug: "digital-marketing-for-handyman-services"
+  },
+  {
+    title: "Mobile Truck Repair Marketing Services",
+    description: "We help mobile truck repair businesses grow with automated booking, local SEO, and review management to keep you on the road to success.",
+    author: {
+      name: "Virsa Labs Team",
+      role: "Truck Repair Marketing Experts",
+      image: "/Virsa (3).png"
+    },
+    date: "Updated Jan 2025",
+    readTime: "Truck Repair Niches",
+    category: "Marketing Automation",
+    image: "/truck-repair-image.png",
+    slug: "digital-marketing-for-mobile-truck-repair"
+  }
+]
+
+---
+
+<Layout title="Niches - Virsa Labs">
+  <NicheLayout 
+    client:load
+    title="Industries We Help"
+    description="Explore the niches we specialize in, helping businesses like roofers, movers, cleaners, and more grow with digital marketing and automation solutions."
+    posts={niches}
+  />
+</Layout> 

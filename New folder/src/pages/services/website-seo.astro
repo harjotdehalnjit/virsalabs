@@ -1,0 +1,161 @@
+---
+import Layout from "../../layouts/Layout.astro"
+import ServicePageLayout from "../../components/ServicePageLayout"
+
+const pageData = {
+  title: "Website SEO",
+  subtitle: "Turn Your Website Into a Lead-Generating Machine",
+  description: "Your website shouldn’t just sit there looking pretty. It should be making you money. Our SEO services ensure your site shows up when customers are searching for businesses like yours — and converts that traffic into paying clients.",
+  features: [
+    {
+      title: "Complete On-Page Optimization",
+      description: "We fine-tune your website’s structure, content, and meta data to rank higher in search results and bring in more local leads.",
+      icon: "⚙️"
+    },
+    {
+      title: "Keyword Targeting That Converts",
+      description: "We don’t chase vanity keywords. We focus on high-intent, local keywords that bring you real customers, not just clicks.",
+      icon: "🔑"
+    },
+    {
+      title: "Mobile & Speed Optimization",
+      description: "Your website needs to load fast and look great on any device. We ensure your site performs perfectly on mobile — where most local searches happen.",
+      icon: "📱"
+    },
+    {
+      title: "Get More Local Customers",
+      description: "We’ll make sure your website shows up when local customers are searching for your services. More visibility means more leads.",
+      icon: "✍️"
+    },
+    {
+      title: "Build Long-Term Trust",
+      description: "An optimized website builds trust with both Google and potential customers. We’ll help you become the go-to business in your area.",
+      icon: "🔧"
+    },
+    {
+      title: "Higher ROI Without Ads",
+      description: "Unlike paid ads, SEO delivers long-term results. Your website keeps generating leads long after we’ve optimized it.",
+      icon: "📌"
+    }
+  ],
+  benefits: [
+    {
+      title: "Get More Local Customers",
+      description: "We’ll make sure your website shows up when local customers are searching for your services. More visibility means more leads.",
+      icon: "📞"
+    },
+    {
+      title: "Build Long-Term Trust",
+      description: "An optimized website builds trust with both Google and potential customers. We’ll help you become the go-to business in your area.",
+      icon: "🤝"
+    },
+    {
+      title: "Higher ROI Without Ads",
+      description: "Unlike paid ads, SEO delivers long-term results. Your website keeps generating leads long after we’ve optimized it.",
+      icon: "💰"
+    },
+    {
+      title: "Save Time & Focus on Your Business",
+      description: "Let us handle the SEO. You focus on what you do best — running your business and serving your customers.",
+      icon: "⏰"
+    }
+  ],
+  processSteps: [
+    {
+      title: "Website Audit",
+      description: "We start with a deep dive into your site to find issues, missed opportunities, and areas for improvement.",
+      icon: "🔍"
+    },
+    {
+      title: "Keyword Research",
+      description: "We identify the best local keywords that will bring in paying customers — not just traffic.",
+      icon: "📋"
+    },
+    {
+      title: "On-Page Optimization",
+      description: "We optimize your website’s content, images, meta tags, and structure to make sure Google loves your site.",
+      icon: "⚙️"
+    },
+    {
+      title: "Technical Fixes",
+      description: "We handle all the behind-the-scenes work, like fixing broken links, improving load speed, and setting up schema markup.",
+      icon: "🔧"
+    },
+    {
+      title: "Content Creation",
+      description: "We create blog posts, service pages, and FAQs that help your site rank higher and convert more visitors into leads.",
+      icon: "✍️"
+    },
+    {
+      title: "Ongoing Monitoring & Updates",
+      description: "SEO isn’t a one-and-done thing. We’ll keep an eye on your site’s performance and make updates to keep it ranking high.",
+      icon: "📈"
+    }
+  ],
+  testimonials: [
+    {
+      name: "Chris Thompson",
+      role: "Owner",
+      company: "Thompson Landscaping",
+      content: "Our website went from a ghost town to a lead-generating powerhouse. We’re getting more calls than ever, and we didn’t have to run ads.",
+      image: "/testimonials/chris.jpg"
+    },
+    {
+      name: "Lisa Brown",
+      role: "Director",
+      company: "Brown Family Dental",
+      content: "We’ve been able to double our new patient bookings since Virsa Labs optimized our website. SEO is a game-changer.",
+      image: "/testimonials/lisa.jpg"
+    },
+    {
+      name: "Mike Sanchez",
+      role: "Manager",
+      company: "Sanchez Auto Repair",
+      content: "The SEO work these guys did has been huge for us. We’re now ranking #1 in our area, and our appointment calendar is always full.",
+      image: "/testimonials/mike.jpg"
+    }
+  ],
+  faq: [
+    {
+      question: "How long does it take to see SEO results?",
+      answer: "SEO isn’t instant, but it’s worth the wait. Most clients see significant improvements in 3-6 months. You’ll start noticing positive changes within the first few weeks."
+    },
+    {
+      question: "Do I need to keep paying for SEO once I rank?",
+      answer: "SEO is a continuous process. Google’s algorithms change, and your competitors won’t sit still. We help maintain your rankings and make sure you stay ahead."
+    },
+    {
+      question: "What makes your SEO service different?",
+      answer: "We focus on results that actually bring in leads. Many agencies chase rankings without thinking about conversions. We optimize for both."
+    },
+    {
+      question: "Is this service just for new websites?",
+      answer: "Nope! We work with existing websites and brand-new ones. We’ll optimize your site no matter where you’re starting from."
+    },
+    {
+      question: "How do you track success?",
+      answer: "We track key metrics like search rankings, website traffic, phone calls, form submissions, and new leads. You’ll get regular reports showing exactly how your website is performing."
+    }
+  ],
+  niches: [
+    { title: "Roofers", href: "/niches/digital-marketing-for-roofers" },
+    { title: "Movers", href: "/niches/marketing-solutions-for-movers" },
+    { title: "Cleaning Services", href: "/niches/digital-marketing-for-cleaning-services" },
+    { title: "Detailers", href: "/niches/auto-detailing-marketing-solutions" },
+    { title: "Handymen", href: "/niches/digital-marketing-for-handyman-services" },
+    { title: "Mobile Truck Repair ", href: "/niches/mobile-truck-repair-marketing-services" },
+  ],
+  locations: [
+    { title: "Bethlehem PA", href: "/locations/digital-marketing-bethlehem-pa" },
+    { title: "Allentown PA", href: "/locations/digital-marketing-allentown-pa" },
+    { title: "Trenton NJ", href: "/locations/digital-marketing-trenton-nj" },
+    { title: "Philadelphia PA", href: "/locations/digital-marketing-philadelphia-pa" },
+    { title: "Easton PA", href: "/locations/digital-marketing-easton-pa" },
+    { title: "Newark NJ", href: "/locations/digital-marketing-newark-nj" },
+  ],
+}
+---
+
+<Layout title="Website SEO - Virsa Labs">
+  <ServicePageLayout client:load {...pageData} />
+</Layout> 

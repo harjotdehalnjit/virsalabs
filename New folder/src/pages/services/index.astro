@@ -1,0 +1,102 @@
+---
+import Layout from "../../layouts/Layout.astro"
+import ServiceLayout from "../../components/ServiceLayout"
+
+const blogPosts = [
+  {
+    title: "Local SEO",
+    description: "Looking to dominate the local search game? We crack Google’s Map Pack (Top 3 results) like it’s second nature.",
+    author: {
+      name: "Harjot Dehal",
+      role: "Founder & SEO Expert",
+      image: "/Virsa (3).png"
+    },
+    date: "january 15, 2025",
+    readTime: "8 min read",
+    category: "SEO",
+    image: "/google-profile-image.png",
+    slug: "local-seo"
+  },
+  {
+    title: "Lead Generation",
+    description: "Tired of chasing dead leads? Let us fill your pipeline with hot prospects on autopilot. We set up smart systems that bring in business while you sleep.",
+    author: {
+      name: "Arsh Singh",
+      role: "CEO",
+      image: "/Virsa (3).png"
+    },
+    date: "january 10, 2025",
+    readTime: "10 min read",
+    category: "Marketing",
+    image: "/automated-lead-management-image.png",
+    slug: "lead-generation"
+  },
+  {
+    title: "PPC Management",
+    description: "Your ad spend deserves better results. We run Google and Facebook campaigns that make your competitors sweat. No fluff — just real, measurable ROI.",
+    author: {
+      name: "Arsh Singh",
+      role: "CEO",
+      image: "/Virsa (3).png"
+    },
+    date: "january 10, 2025",
+    readTime: "10 min read",
+    category: "Marketing",
+    image: "/automated-lead-management-image.png",
+    slug: "ppc-management"
+  },
+  {
+    title: " Website SEO",
+    description: "Your website’s invisible or you dont have one? Not on our watch. We’ll fix your site and have it represent your brand with trust",
+    author: {
+      name: "Arsh Singh",
+      role: "CEO",
+      image: "/Virsa (3).png"
+    },
+    date: "january 10, 2025",
+    readTime: "10 min read",
+    category: "Marketing",
+    image: "/automated-lead-management-image.png",
+    slug: "website-seo"
+  },
+  {
+    title: "Business Automations",
+    description: "Manual work is a thing of the past. We automate your lead capture, follow-ups, and workflows, turning your business into a machine.",
+    author: {
+      name: "Arsh Singh",
+      role: "CEO",
+      image: "/Virsa (3).png"
+    },
+    date: "january 10, 2025",
+    readTime: "10 min read",
+    category: "Marketing",
+    image: "/automated-lead-management-image.png",
+    slug: "business-automations"
+  },
+
+  {
+    title: "Social Media Management",
+    description: "Your audience is scrolling — are you showing up? We create scroll-stopping content, manage your platforms, and keep your brand top of mind.",
+    author: {
+      name: "Arsh Singh",
+      role: "CEO",
+      image: "/Virsa (3).png"
+    },
+    date: "january 10, 2025",
+    readTime: "10 min read",
+    category: "Marketing",
+    image: "/automated-lead-management-image.png",
+    slug: "social-media-management"
+  }
+]
+---
+
+<Layout title="Digital Marketing Services - Virsa Labs">
+  <ServiceLayout 
+    client:load
+    title="Digital Marketing Services"
+    description="Ready to take your business to the next level? Book a call with us below to learn more about how we can help."
+    posts={blogPosts}
+    
+  />
+</Layout> 

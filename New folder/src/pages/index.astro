@@ -7,7 +7,6 @@ import Globe from '../components/Globe';
 import AppShowcase from '../components/AppShowcase';
 import PainPoints from '../components/PainPoints';
 import OurPromise from '../components/OurPromise';
-import VideoTestimonials from '../components/VideoTestimonials';
 
 ---
 
@@ -17,7 +16,7 @@ import VideoTestimonials from '../components/VideoTestimonials';
 >
 	<main class="relative" id="main-content">
 		{/* Hero Section */}
-		<section class="relative min-h-[90vh] flex items-center justify-center overflow-hidden mt-4  sm:-mt-0" aria-labelledby="hero-heading" style={{
+		<section class="relative min-h-[90vh] flex items-center justify-center overflow-hidden mt-4 sm:-mt-0" aria-labelledby="hero-heading" style={{
       background: 'radial-gradient(circle at center, rgba(85, 40, 160, 0.76) 0%, rgba(20, 10, 60, 0.9) 55%, transparent 80%)'
     }}>
 			{/* Globe Background */}
@@ -54,10 +53,7 @@ import VideoTestimonials from '../components/VideoTestimonials';
 			</div>
 		</section>
 
-		{/* Video Testimonials Section */}
-		<VideoTestimonials  client:load />
-
-		<!-- {/* Trust Section */}
+		{/* Trust Section */}
 		<section id="trust" class="py-12 sm:py-24 bg-background relative overflow-hidden -mt-60 sm:mt-0" aria-labelledby="trust-heading" style={{
 			background: 'radial-gradient(circle at center, rgba(85, 40, 160, 0.76) 0%, rgba(20, 10, 60, 0.9) 55%, transparent 80%)'
 		}}>
@@ -92,7 +88,7 @@ import VideoTestimonials from '../components/VideoTestimonials';
     name: "Tako Mine",
     role: "Salford Web",
     image: "/salford.png",
-    content: "They built an automated system that keeps our pipeline full and our members coming back. It's like having a 24/7 sales team without the payroll",
+    content: "They built an automated system that keeps our pipeline full and our members coming back. It’s like having a 24/7 sales team without the payroll",
    
   }
   
@@ -125,7 +121,7 @@ import VideoTestimonials from '../components/VideoTestimonials';
 					))}
 				</div>
 			</div>
-		</section> -->
+		</section>
 
 		{/* Pain Points Section */}
 		<PainPoints client:load />
@@ -158,13 +154,13 @@ import VideoTestimonials from '../components/VideoTestimonials';
 						},
 						{
 							title: "Market Exclusivity",
-							description: "We work with one business per industry in an area. When you partner with us, your competitors don't get a seat at the table.",
+							description: "We work with one business per industry in an area. When you partner with us, your competitors don’t get a seat at the table.",
 							icon: "📈",
     color: "from-blue-500/10 to-blue-500/5"
 						},
 						{
 							title: "100% Transparency",
-							description: "No smoke and mirrors. You'll know exactly what we did and the impact it had.",
+							description: "No smoke and mirrors. You’ll know exactly what we did and the impact it had.",
 							icon: "🎯",
     color: "from-blue-500/10 to-blue-500/5"
 							

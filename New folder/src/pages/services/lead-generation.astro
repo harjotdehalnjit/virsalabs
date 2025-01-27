@@ -1,0 +1,165 @@
+---
+import Layout from "../../layouts/Layout.astro"
+import ServicePageLayout from "../../components/ServicePageLayout"
+const pageData = {
+  title: "Lead Generation",
+  subtitle: "Turn Searches Into Customers",
+  description: "Your business is already getting attention — the problem is you’re not capturing it all. Our lead generation service ensures you never miss an opportunity. We turn website visitors, social media viewers, and past customers into leads, then help you convert them into paying clients with smart automation and personalized follow-ups.",
+  features: [
+    {
+      title: "Lead Capture & Database Reactivation",
+      description: "We capture new leads from your website, social media, and online listings. Plus, we’ll revive your old leads with targeted SMS and email campaigns that drive action.",
+      icon: "🎯"
+    },
+    {
+      title: "Automated Follow-Ups That Close Deals",
+      description: "Most businesses lose leads because they don’t follow up fast enough. We solve that with automated follow-ups — ensuring every lead gets a response while they’re still interested.",
+      icon: "⚡"
+    },
+    {
+      title: "Call & Message Tracking",
+      description: "Know exactly where your leads are coming from and how they’re interacting with your business. Track every call, message, and email for complete visibility.",
+      icon: "📩"
+    },
+    {
+      title: "Capture More Leads",
+      description: "Stop leaving money on the table. We ensure every potential customer gets captured and tracked in your system.",
+      icon: "📊"
+    },
+    {
+      title: "Respond Faster",
+      description: "Automated follow-ups mean no more missed opportunities. Your leads get a fast, professional response — every time.",
+      icon: "📅"
+    },
+    {
+      title: "Save Time & Stay Organized",
+      description: "Automate the busy work and keep your team focused on closing deals. Everything is managed in one place, with real-time tracking and reporting.",
+      icon: "🤖"
+    }
+  ],
+  benefits: [
+    {
+      title: "Capture More Leads",
+      description: "Stop leaving money on the table. We ensure every potential customer gets captured and tracked in your system.",
+      icon: "📥"
+    },
+    {
+      title: "Respond Faster",
+      description: "Automated follow-ups mean no more missed opportunities. Your leads get a fast, professional response — every time.",
+      icon: "⚡"
+    },
+    {
+      title: "Higher Conversion Rates",
+      description: "Turn more leads into paying customers with smart nurturing sequences that keep them engaged.",
+      icon: "📈"
+    },
+    {
+      title: "Save Time & Stay Organized",
+      description: "Automate the busy work and keep your team focused on closing deals. Everything is managed in one place, with real-time tracking and reporting.",
+      icon: "🗂️"
+    }
+  ],
+  processSteps: [
+    {
+      title: "Lead Audit & Strategy",
+      description: "We start by analyzing your current lead generation efforts to find gaps and missed opportunities. Then, we build a custom strategy to capture more leads and convert them faster.",
+      icon: "🔍"
+    },
+    {
+      title: "System Setup",
+      description: "We integrate all your lead sources — website forms, social media, ads, and more — into a single system that automatically captures and tracks leads.",
+      icon: "⚙️"
+    },
+    {
+      title: "Automation Setup",
+      description: "We build automated follow-up sequences to keep leads engaged and move them closer to a sale. SMS, email, calls — we cover it all.",
+      icon: "🤖"
+    },
+    {
+      title: "Campaign Creation",
+      description: "We create custom campaigns tailored to your business. From reactivation campaigns to special promotions, we make sure you stay in front of your audience.",
+      icon: "📢"
+    },
+    {
+      title: "Monitoring & Optimization",
+      description: "We track every interaction and continuously optimize your lead generation efforts to improve results. You’ll know exactly where your leads are coming from — and what’s converting them.",
+      icon: "📈"
+    }
+  ],
+  testimonials: [
+    {
+      name: "Jessica Lee",
+      role: "Owner",
+      company: "Glow Skincare",
+      content: "Since partnering with Virsa Labs, we’ve tripled our inquiries and bookings. Their follow-up system is a game-changer. We never miss a lead anymore!",
+      image: "/testimonials/jessica.jpg"
+    },
+    {
+      name: "Mark Johnson",
+      role: "Director",
+      company: "Johnson Home Services",
+      content: "The database reactivation campaign brought in more leads than we ever expected — all from old contacts we thought were dead. The ROI has been incredible.",
+      image: "/testimonials/mark.jpg"
+    },
+    {
+      name: "Emily White",
+      role: "Manager",
+      company: "The Green Table Restaurant",
+      content: "Virsa Labs helped us build a VIP list that we now use for all our promotions. It’s completely automated, and our reservations are always full. Couldn’t be happier!",
+      image: "/testimonials/emily.jpg"
+    }
+  ],
+  faq: [
+    {
+      question: "What is lead generation?",
+      answer: "Lead generation is the process of attracting potential customers and converting them into people interested in your services. We use automation and smart campaigns to make sure no lead slips through the cracks."
+    },
+    {
+      question: "How do you capture leads?",
+      answer: "We set up systems to capture leads from your website, social media, Google Business Profile, and more. Every lead is automatically added to your CRM for tracking and follow-up."
+    },
+    {
+      question: "Do you handle follow-ups?",
+      answer: "Yes! We automate follow-ups via SMS, email, and phone calls to ensure leads are engaged immediately and consistently."
+    },
+    {
+      question: "How long before I see results?",
+      answer: "Most clients see a significant boost in lead inquiries within the first month of implementation. We start with quick wins and build long-term systems to keep the leads flowing."
+    },
+    {
+      question: "What’s the ROI on lead generation?",
+      answer: "Our lead generation services typically result in a 30-60% increase in lead conversions. The exact ROI depends on your industry and campaign strategy, but most clients see a return within the first few months."
+    }
+  ],
+
+  niches: [
+    { title: "Roofers", href: "/niches/digital-marketing-for-roofers" },
+    { title: "Movers", href: "/niches/marketing-solutions-for-movers" },
+    { title: "Cleaning Services", href: "/niches/digital-marketing-for-cleaning-services" },
+    { title: "Detailers", href: "/niches/auto-detailing-marketing-solutions" },
+    { title: "Handymen", href: "/niches/digital-marketing-for-handyman-services" },
+    { title: "Mobile Truck Repair ", href: "/niches/mobile-truck-repair-marketing-services" },
+  ],
+  locations: [
+    { title: "Bethlehem PA", href: "/locations/digital-marketing-bethlehem-pa" },
+    { title: "Allentown PA", href: "/locations/digital-marketing-allentown-pa" },
+    { title: "Trenton NJ", href: "/locations/digital-marketing-trenton-nj" },
+    { title: "Philadelphia PA", href: "/locations/digital-marketing-philadelphia-pa" },
+    { title: "Easton PA", href: "/locations/digital-marketing-easton-pa" },
+    { title: "Newark NJ", href: "/locations/digital-marketing-newark-nj" },
+  ],
+
+  // services: [
+  //   { title: "Local Seo", href: "/services/local-seo" },
+  //   { title: "Lead Generation", href: "/services/lead-generation" },
+  //   { title: "PPC Management", href: "/services/ppc-management" },
+  //   { title: "Website SEO", href: "/services/website-seo" },
+  //   { title: "Business Automations", href: "/services/business-automations" },
+  //   { title: "Social Media Management", href: "/services/social-media-management" },
+  // ],
+}
+---
+
+<Layout title="Lead Management - Virsa Labs">
+  <ServicePageLayout client:load {...pageData} />
+</Layout> 
