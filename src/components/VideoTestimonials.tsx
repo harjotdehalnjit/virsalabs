@@ -204,17 +204,17 @@ const VideoTestimonials = () => {
        
         <button 
             onClick={() => swiperRef.current?.slidePrev()}
-            className="absolute left-0 top-1/2 -translate-y-1/2 z-20 md:hidden bg-primary/90 text-white p-1 rounded-r-lg"
+            className="absolute left-0 top-1/2 -translate-y-1/2 z-20 md:hidden bg-primary/90 text-white p-1  rounded-r-lg"
             aria-label="Previous slide"
           >
-            <ChevronLeft className="w-2 h-4" />
+            <ChevronLeft className="w-6 h-6" />
           </button>
           <button 
             onClick={() => swiperRef.current?.slideNext()}
-            className="absolute right-0 top-1/2 -translate-y-1/2 z-20 md:hidden bg-primary/90 text-white p-1 rounded-l-lg"
+            className="absolute right-0 top-1/2 -translate-y-1/2 z-20 md:hidden bg-primary/90 text-white p-1 -ml-4 rounded-l-lg"
             aria-label="Next slide"
           >
-            <ChevronRight className="w-2 h-4" />
+            <ChevronRight className="w-6 h-6" />
           </button>
           <Swiper
             modules={[Navigation, Pagination]}
