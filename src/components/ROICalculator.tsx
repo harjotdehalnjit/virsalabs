@@ -1,0 +1,136 @@
+import { useState } from "react";
+
+const ROICalculator = () => {
+  const investment = 500;
+  const [averageClientValue, setAverageClientValue] = useState(200);
+  const [missedCallsPerMonth, setMissedCallsPerMonth] = useState(10);
+  const [averageCloseRate, setAverageCloseRate] = useState(50);
+  const [monthlyLeft, setMonthlyLeft] = useState(0);
+  const [roi, setRoi] = useState(0);
+
+  const calculateROI = () => {
+    const monthlyRevenue = averageClientValue * missedCallsPerMonth * (averageCloseRate / 100);
+    const calculatedROI = ((monthlyRevenue - investment) / investment) * 100;
+    setMonthlyLeft(monthlyRevenue);
+    setRoi(calculatedROI);
+  };
+
+  return (
+    <div>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-6xl mx-auto mt-16">
+        {/* Left Section: ROI Calculator */}
+        <div className="backdrop-blur-sm bg-card/50 border-primary/20 h-full transition-all duration-300 hover:scale-105 hover:border-primary/40 p-6 rounded-2xl">
+          <h2 className="text-2xl font-bold mb-6 text-white">
+            ROI Calculator
+          </h2>
+
+          <div className="space-y-4">
+            <div>
+              <label className="block text-lg font-medium text-white mb-2">
+                Average Client Value
+              </label>
+              <div className="relative">
+                <span className="absolute left-3 top-1/2 -translate-y-1/2 text-slate-600">$</span>
+                <input
+                  type="number"
+                  className="w-full p-3 pl-7 bg-white/80 text-black border border-slate-200 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none transition-all"
+                  value={averageClientValue}
+                  onChange={(e) => setAverageClientValue(Number(e.target.value))}
+                />
+              </div>
+            </div>
+
+            <div>
+              <label className="block text-lg font-medium text-white mb-2">
+                Missed Calls per Month
+              </label>
+              <input
+                type="number"
+                className="w-full p-3 bg-white/80 border text-black border-slate-200 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none transition-all"
+                value={missedCallsPerMonth}
+                onChange={(e) => setMissedCallsPerMonth(Number(e.target.value))}
+              />
+            </div>
+
+            <div>
+              <label className="block text-lg font-medium text-white mb-2">
+                Average Close Rate
+              </label>
+              <div className="relative">
+                <input
+                  type="number"
+                  className="w-full p-3 pr-7 bg-white/80 border  text-black border-slate-200 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none transition-all"
+                  value={averageCloseRate}
+                  onChange={(e) => setAverageCloseRate(Number(e.target.value))}
+                />
+                <span className="absolute right-3 top-1/2 -translate-y-1/2 text-slate-600">%</span>
+              </div>
+            </div>
+
+            <button 
+              onClick={calculateROI}
+              className="w-full bg-indigo-600 text-white py-3 px-4 rounded-lg text-lg font-semibold hover:bg-indigo-500 transition-all mt-4"
+            >
+              Calculate ROI
+            </button>
+
+            {(monthlyLeft > 0 || roi > 0) && (
+              <div className="mt-4 bg-white/80 p-4 rounded-lg space-y-2">
+                <h4 className="text-lg font-semibold text-slate-900">Results</h4>
+                <div className="grid gap-2">
+                  <div className="flex justify-between">
+                    <span className="text-slate-600">Monthly Revenue Potential:</span>
+                    <span className="font-bold text-emerald-600">${monthlyLeft.toFixed(2)}</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="text-slate-600">Monthly Investment:</span>
+                    <span className="font-bold text-slate-900">${investment.toFixed(2)}</span>
+                  </div>
+                  <div className="flex justify-between border-t border-slate-200 pt-2">
+                    <span className="text-slate-600">Return on Investment:</span>
+                    <span className="font-bold text-indigo-600">{roi.toFixed(2)}%</span>
+                  </div>
+                </div>
+              </div>
+            )}
+          </div>
+        </div>
+
+        {/* Right Section: Financial Benefits */}
+        <div className="bg-slate-100/90 backdrop-blur-sm p-6 rounded-2xl">
+          <h2 className="text-2xl font-bold mb-6 text-slate-900">
+            Turn Missed Calls Into Revenue
+          </h2>
+          
+          <div className="space-y-6">
+           
+
+            <div className=" p-4 rounded-lg">
+              <h3 className="text-lg font-semibold mb-3 text-slate-900">
+                Stop Leaving Money on the Table
+              </h3>
+              <ul className="space-y-6">
+                {[
+                  
+                  "Capture after-hours calls that would normally go to voicemail",
+           
+                  "If you can save just a few missed calls a month, would this service pay for itself?",
+                  "Does not even consider a new influx of leads. This is just 1 feature to help you convert more leads",
+                ].map((benefit) => (
+                  <li key={benefit} className="flex items-center gap-2 text-slate-700">
+                    <svg className="w-8 h-8 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
+                    </svg>
+                    {benefit}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default ROICalculator;

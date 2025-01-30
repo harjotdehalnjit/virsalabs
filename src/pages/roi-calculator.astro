@@ -1,0 +1,20 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ROICalculator from '../components/ROICalculator.tsx';
+---
+
+<Layout title="ROI Calculator | Virsa Labs" description="Calculate your return on investment with our ROI Calculator. Estimate potential revenue and missed opportunities for your business.">
+    <main class="relative py-16 lg:py-20 text-center" style={{
+        background: 'radial-gradient(circle at center, rgba(85, 40, 160, 0.76) 0%, rgba(20, 10, 60, 0.9) 55%, transparent 80%)'
+      }}>
+        <div class="container px-4 md:px-6">
+            <div class="mx-auto max-w-3xl space-y-8">
+                <div class="space-y-4">
+                    <h1 class="text-4xl font-bold tracking-tighter sm:text-5xl">ROI Calculator</h1>
+                    <p class="text-muted-foreground">Estimate your revenue potential based on missed calls.</p>
+                </div>
+                <ROICalculator client:load />
+            </div>
+        </div>
+    </main>
+</Layout>

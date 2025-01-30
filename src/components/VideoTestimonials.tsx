@@ -23,7 +23,7 @@ const testimonials: Testimonial[] = [
     rating: 5,
   },
   {
-    name: "Chris Stuart",
+    name: "Dr. Stuart",
     company: "Dermatologist",
     vimeoId: "1050834775",
     rating: 5,
@@ -40,16 +40,29 @@ const testimonials: Testimonial[] = [
     vimeoId: "1050929586" ,
     rating: 5,
   },
-  // {
-  //   name: "Tre",
-  //   company: "Detailer",
-  //   vimeoId: "1050839834",
-  //   rating: 5,
-  // },
   {
     name: "Bill",
     company: "Roofer",
     vimeoId: "1050840424",
+    rating: 5,
+  },
+  {
+    name: "Alex",
+    company: "Presure Washing",
+    vimeoId: "1051985887",
+    rating: 5,
+  },
+ 
+  {
+    name: "Emily",
+    company: "Boutique",
+    vimeoId: "1051678892",
+    rating: 5,
+  },
+  {
+    name: "Trey",
+    company: "Detailer",
+    vimeoId: "1051684216",
     rating: 5,
   },
   {
@@ -58,7 +71,6 @@ const testimonials: Testimonial[] = [
     vimeoId: "1050841540",
     rating: 5,
   },
-  
 
 ];
 
