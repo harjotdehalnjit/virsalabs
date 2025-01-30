@@ -148,7 +148,7 @@ const ROICalculator = () => {
 
 <div className="flex items-start space-x-3">
      
-          <span>It shows how much revenue you are missing out on just by missing calls. <br /> See the actual numbers  </span>
+          <span>It shows how much revenue you are missing out on just by missing calls. <br /> See the actual numbers behind the impact of missed leads + more leads  </span>
         </div> 
 
       </div>
