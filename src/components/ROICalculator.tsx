@@ -23,6 +23,9 @@ const ROICalculator = () => {
         {/* Left Section: ROI Calculator */}
         <div className="backdrop-blur-sm bg-card/50 border-primary/20 h-full transition-all duration-300 hover:scale-105 hover:border-primary/40 p-6 rounded-2xl">
         
+        <h2 className="text-2xl font-bold mb-6 text-white">
+            ROI Calculator
+          </h2>
 
           <div className="space-y-4">
             <div>
