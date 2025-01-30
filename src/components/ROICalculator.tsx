@@ -162,7 +162,7 @@ const ROICalculator = () => {
         {[
           "Our AI Tools work 24/7 and help you convert leads no matter the time of day",
           "If you can save just a few missed calls a month, would this service pay for itself?",
-          "Not only can you now handle + get more work, you don't have to hire a receptionist to manage it ",
+         
         ].map((benefit) => (
           <li key={benefit} className="flex items-center gap-3">
             <svg className="w-6 h-6 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
