@@ -53,24 +53,24 @@ const testimonials: Testimonial[] = [
     rating: 5,
   },
  
-  {
-    name: "Emily",
-    company: "Boutique",
-    vimeoId: "1051678892",
-    rating: 5,
-  },
+  // {
+  //   name: "Emily",
+  //   company: "Boutique",
+  //   vimeoId: "1051678892",
+  //   rating: 5,
+  // },
   {
     name: "Trey",
     company: "Detailer",
     vimeoId: "1051684216",
     rating: 5,
   },
-  {
-    name: "Diego",
-    company: "Commercial Cleaning",
-    vimeoId: "1050841540",
-    rating: 5,
-  },
+  // {
+  //   name: "Diego",
+  //   company: "Commercial Cleaning",
+  //   vimeoId: "1050841540",
+  //   rating: 5,
+  // },
 
 ];
 
