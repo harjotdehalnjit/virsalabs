@@ -97,37 +97,68 @@ const ROICalculator = () => {
         </div>
 
         {/* Right Section: Financial Benefits */}
-        <div className="bg-slate-100/90 backdrop-blur-sm p-6 rounded-2xl">
-          <h2 className="text-2xl font-bold mb-6 text-slate-900">
-            Turn Missed Calls Into Revenue
-          </h2>
-          
-          <div className="space-y-6">
-           
-
-            <div className=" p-4 rounded-lg">
-              <h3 className="text-lg font-semibold mb-3 text-slate-900">
-                Stop Leaving Money on the Table
-              </h3>
-              <ul className="space-y-6">
-                {[
-                  
-                  "Capture after-hours calls that would normally go to voicemail",
-           
-                  "If you can save just a few missed calls a month, would this service pay for itself?",
-                  "Does not even consider a new influx of leads. This is just 1 feature to help you convert more leads",
-                ].map((benefit) => (
-                  <li key={benefit} className="flex items-center gap-2 text-slate-700">
-                    <svg className="w-8 h-8 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
-                    </svg>
-                    {benefit}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
+      {/* Right Section: Financial Benefits */}
+<div className="bg-slate-100/90 backdrop-blur-sm p-6 rounded-2xl h-full transition-all duration-300 hover:scale-105 hover:border-primary/40">
+  <h2 className="text-2xl font-semibold mb-6 text-slate-900">How it works</h2>
+  
+  <div className="space-y-6">
+    <div className="p-4 rounded-lg bg-white shadow-lg hover:shadow-xl transition-all duration-300">
+     
+      <div className="grid gap-4 grid-cols-1 md:grid-cols-2 text-md text-black">
+        <div className="flex items-start space-x-3">
+          <svg className="w-6 h-6 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
+          </svg>
+          <span>Enter the average lifetime value of a customer.</span>
         </div>
+        <div className="flex items-start space-x-3">
+          <svg className="w-6 h-6 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
+          </svg>
+          <span>Enter an estimate of how many calls you miss per week.</span>
+        </div>
+        <div className="flex items-start space-x-3">
+          <svg className="w-6 h-6 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
+          </svg>
+          <span>Enter the rate at which you close new sales.</span>
+        </div>
+        <div className="flex items-start space-x-3">
+          <svg className="w-6 h-6 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
+          </svg>
+          <span>Hit Calculate and see how much your missing out</span>
+        </div>
+      </div>
+    </div>
+
+    <div className="p-4 rounded-lg bg-white shadow-lg hover:shadow-xl transition-all duration-300">
+      <h3 className="text-lg font-semibold mb-3 text-slate-900">Stop Leaving Money on the Table</h3>
+      <ul className="space-y-4 text-md text-slate-700">
+        {[
+          "Capture after-hours calls that would normally go to voicemail",
+          "If you can save just a few missed calls a month, would this service pay for itself?",
+          "Does not even consider a new influx of leads. This is just 1 feature to help you convert more leads",
+        ].map((benefit) => (
+          <li key={benefit} className="flex items-center gap-3">
+            <svg className="w-6 h-6 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
+            </svg>
+            <span>{benefit}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
+
+    {/* Optional CTA: Clear Call to Action */}
+    <div className="mt-6 text-center">
+      <button  className="bg-indigo-600 text-white p-6 py-3 rounded-lg text-lg font-semibold hover:bg-indigo-500 transition-all">
+      <a href="/book-consultation">Book A Call</a>
+      </button>
+    </div>
+  </div>
+</div>
+
       </div>
     </div>
   );
