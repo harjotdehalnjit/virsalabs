@@ -200,7 +200,7 @@ const VideoTestimonials = () => {
   }, []);
 
   return (
-    <section className="-translate-y-44  md:-translate-y-20 px-8 py-4 md:py-8 relative overflow-hidden -mb-20  " style={{
+    <section className=" px-8 py-4 md:py-8 relative overflow-hidden -mb-20  " style={{
       background: 'radial-gradient(circle at center, rgba(85, 40, 160, 0.76) 0%, rgba(20, 10, 60, 0.9) 55%, transparent 80%)'
     }}>
       <div className="container mx-auto px-0 md:px-4  max-w-3xl xl:max-w-4xl 2xl:max-w-5xl"> {/* Added max-w-6xl */}

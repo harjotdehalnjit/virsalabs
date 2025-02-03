@@ -54,9 +54,7 @@ import VideoTestimonials from '../components/VideoTestimonials';
 			</div>
 		</section>
 
-		{/* Video Testimonials Section */}
-		<VideoTestimonials  client:load />
-
+	
 		<!-- {/* Trust Section */}
 		<section id="trust" class="py-12 sm:py-24 bg-background relative overflow-hidden -mt-60 sm:mt-0" aria-labelledby="trust-heading" style={{
 			background: 'radial-gradient(circle at center, rgba(85, 40, 160, 0.76) 0%, rgba(20, 10, 60, 0.9) 55%, transparent 80%)'
@@ -202,6 +200,8 @@ import VideoTestimonials from '../components/VideoTestimonials';
 		  }}>
 			<AppShowcase client:only="react" />
 		</section>
+	{/* Video Testimonials Section */}
+	<VideoTestimonials  client:load />
 
 		{/* CTA Section */}
 		<section class="py-24 bg-background/50 backdrop-blur-sm relative overflow-hidden "style={{

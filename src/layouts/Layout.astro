@@ -15,7 +15,9 @@ const {
 	description = "Boost your online presence with professional services. We help businesses grow through innovative digital marketing and SEO solutions. Available 24/7."
 } = Astro.props;
 
-const canonicalURL = "https://www.virsalabs.io";
+// Get the full URL including protocol, hostname, and port
+const baseURL = Astro.url.origin;
+const canonicalURL = import.meta.env.PROD ? "https://www.virsalabs.io" : baseURL;
 ---
 
 <!doctype html>
@@ -38,45 +40,46 @@ const canonicalURL = "https://www.virsalabs.io";
 		<!-- Favicon -->
 		<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png">
 		<link rel="icon" type="image/png" sizes="16x16" href="/favicon.png">
-		<link rel="apple-touch-icon" sizes="180x180" href="/favicon.png">
-		<link rel="mask-icon" href="/favicon.png" color="#000027">
-		<meta name="msapplication-TileImage" content="/favicon.png">
-		<meta name="msapplication-TileColor" content="#000027">
-		<meta name="theme-color" content="#000027">
-	
-		<meta name="generator" content={Astro.generator} />
-		
+		<link rel="apple-touch-icon" sizes="180x180" href="/favicon-bg.png">
+		<link rel="mask-icon" href="/favicon.png" color="#000000">
+		<meta name="msapplication-TileImage" content="/favicon-bg.png">
+		<meta name="msapplication-TileColor" content="#000000">
+		<meta name="theme-color" content="#000000">
+
 		<!-- Primary Meta Tags -->
 		<title>{title}</title>
 		<meta name="title" content={title} />
 		<meta name="description" content={description} />
 		<link rel="canonical" href={canonicalURL} />
 
+		<!-- iMessage and Mobile Preview - Absolute URLs -->
+		<meta property="og:type" content="website" />
+		<meta property="og:site_name" content="Virsa Labs" />
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		<meta property="og:url" content={canonicalURL} />
+		<meta property="og:image" content={`${baseURL}/favicon-bg.png`} />
+		<meta property="og:image:width" content="1200" />
+		<meta property="og:image:height" content="1200" />
+		<meta property="og:image:alt" content="Virsa Labs Logo" />
+
+		<!-- Apple-specific with absolute URLs -->
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-title" content="Virsa Labs" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+		<link rel="apple-touch-icon" href={`${baseURL}/favicon-bg.png`} />
+		<link rel="apple-touch-icon-precomposed" sizes="1200x1200" href={`${baseURL}/favicon-bg.png`} />
+
+		<!-- Twitter Card (can help with iMessage previews) -->
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:site" content="@virsalabs" />
+		<meta name="twitter:title" content={title} />
+		<meta name="twitter:description" content={description} />
+		<meta name="twitter:image" content={`${canonicalURL}/favicon-bg.png`} />
+
 		<!-- Business Information -->
 		<meta name="author" content="Virsa Labs" />
 		<meta name="contact" content="team@virsalabs.io" />
-		<meta name="geo.region" content="US-PA" />
-		<meta name="geo.placename" content="Bethlehem" />
-		<meta name="geo.position" content="40.681520;-75.343249" />
-		<meta name="ICBM" content="40.681520, -75.343249" />
-
-		<!-- Open Graph / Facebook -->
-		<meta property="og:type" content="website" />
-		<meta property="og:url" content={canonicalURL} />
-		<meta property="og:title" content={title} />
-		<meta property="og:description" content={description} />
-		<meta property="og:image" content={`${canonicalURL}/og-image.jpg`} />
-		<meta property="og:site_name" content="Virsa Labs" />
-		<meta property="og:locale" content="en_US" />
-
-		<!-- Twitter -->
-		<meta property="twitter:card" content="summary_large_image" />
-		<meta property="twitter:url" content={canonicalURL} />
-		<meta property="twitter:title" content={title} />
-		<meta property="twitter:description" content={description} />
-		<meta property="twitter:image" content={`${canonicalURL}/twitter-image.jpg`} />
-		<meta name="twitter:site" content="@virsalabs" />
-		<meta name="twitter:creator" content="@virsalabs" />
 
 		<!-- Additional SEO Tags -->
 		<meta name="keywords" content="Digital Marketing, SEO Services, Local SEO, Lead Generation, PPC Management, Website SEO, Social Media Management, Business Automation, Bethlehem PA, Digital Marketing Agency" />
