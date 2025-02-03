@@ -35,7 +35,8 @@
     "three": "^0.172.0"
   },
   "optionalDependencies": {
-  "@rollup/rollup-linux-x64-gnu": "4.9.5"
+  "@rollup/rollup-linux-x64-gnu": "4.9.5",
+  "esbuild": "^0.18.0"
 },
 
   "devDependencies": {
