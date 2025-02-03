@@ -32,7 +32,7 @@ const painPoints = [
 
 export default function PainPoints() {
   return (
-    <section className=" -translate-y-48  md:-translate-y-20 py-24 bg-background/50 backdrop-blur-sm relative overflow-hidden" style={{
+    <section className=" -translate-y-56 -mb-60 md:-mb-20 md:-translate-y-20 py-24 bg-background/50 backdrop-blur-sm relative overflow-hidden" style={{
       background: 'radial-gradient(circle at center, rgba(85, 40, 160, 0.76) 0%, rgba(20, 10, 60, 0.9) 55%, transparent 80%)'
     }}>
       <div className="container relative z-10" >

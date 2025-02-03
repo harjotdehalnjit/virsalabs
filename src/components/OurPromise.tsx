@@ -47,7 +47,7 @@ const itemVariants = {
 
 export default function OurPromise() {
   return (
-    <section className="py-24 bg-background relative overflow-hidden" style={{
+    <section className="    py-24 bg-background relative overflow-hidden" style={{
       background: 'radial-gradient(circle at center, rgba(85, 40, 160, 0.76) 0%, rgba(20, 10, 60, 0.9) 55%, transparent 80%)'
     }}>
       <div className="container relative z-10" >
