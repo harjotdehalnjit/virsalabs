@@ -3,11 +3,13 @@
   "type": "module",
   "version": "0.0.1",
   "scripts": {
-    "dev": "astro dev",
-    "build": "astro build",
-    "preview": "astro preview",
-    "astro": "astro"
-  },
+  "dev": "astro dev",
+  "build": "astro build",
+  "preview": "astro preview",
+  "astro": "astro",
+    "vercel-build": "npm install && npm run build"
+}
+,
   "dependencies": {
     "@astrojs/react": "^4.1.2",
     "@astrojs/tailwind": "^5.1.4",
