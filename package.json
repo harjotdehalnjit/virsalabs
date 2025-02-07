@@ -45,6 +45,7 @@
     "@types/prettier": "^2.7.3",
     "@types/vimeo__player": "^2.18.3",
     "globby": "^14.0.2",
+    "png-to-ico": "^2.1.8",
     "prettier": "^3.4.2",
     "sharp": "^0.33.5"
   }
