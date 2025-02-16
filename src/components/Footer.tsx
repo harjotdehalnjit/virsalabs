@@ -46,6 +46,17 @@ const Footer = () => {
             3005 Brodhead Rd #23 <br />Bethlehem, PA 18020
 </p>
             </div>
+            
+            <div>
+            <p className="text-sm text-muted-foreground">
+
+            Business Hours: <br /> Monday – Friday: 8:00 AM – 5:00 PM <br />
+            Saturday – Sunday: Closed
+</p>
+            </div>
+            
+
+
           </div>
 
           {/* Services */}
