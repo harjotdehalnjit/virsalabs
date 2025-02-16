@@ -43,7 +43,7 @@ const Footer = () => {
             <div>
             <p className="text-sm text-muted-foreground">
 
-            3005 Brodhead Rd STE 23 <br />Bethlehem, PA 18020
+            3005 Brodhead Rd #23 <br />Bethlehem, PA 18020
 </p>
             </div>
           </div>

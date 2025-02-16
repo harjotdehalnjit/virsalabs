@@ -8,6 +8,7 @@ import AppShowcase from '../components/AppShowcase';
 import PainPoints from '../components/PainPoints';
 import OurPromise from '../components/OurPromise';
 import VideoTestimonials from '../components/VideoTestimonials';
+import ClientLogos from '../components/ClientLogos';
 
 ---
 
@@ -38,12 +39,10 @@ import VideoTestimonials from '../components/VideoTestimonials';
 					</div>
 					<div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
 						<a href="/book-consultation" class="button-glow" aria-label="Schedule a free consultation">
-  <div class="button-glow-inner">
-    Book A Call
-  </div>
-</a>
-
-
+							<div class="button-glow-inner">
+								Book A Call
+							</div>
+						</a>
 						<a href="#trust" class="hidden md:block w-full sm:w-auto" aria-label="View our client success stories">
 							<Button variant="outline" size="lg" className="w-full sm:w-auto text-base sm:text-lg border-orange-500/20 hover:bg-orange-500/10 transition-all duration-300">
 								See Client Results
@@ -54,76 +53,8 @@ import VideoTestimonials from '../components/VideoTestimonials';
 			</div>
 		</section>
 
-	
-		<!-- {/* Trust Section */}
-		<section id="trust" class="py-12 sm:py-24 bg-background relative overflow-hidden -mt-60 sm:mt-0" aria-labelledby="trust-heading" style={{
-			background: 'radial-gradient(circle at center, rgba(85, 40, 160, 0.76) 0%, rgba(20, 10, 60, 0.9) 55%, transparent 80%)'
-		}}>
-			<div class="container relative z-10 px-4">
-				<div class="text-center mb-8 sm:mb-12 pt-8 sm:pt-0">
-					<Badge variant="outline" className="mb-4">SUCCESS STORIES</Badge>
-					<h2 id="trust-heading" class="text-2xl sm:text-3xl font-bold tracking-tight sm:text-4xl mb-4">
-						Trusted by Growing Businesses
-					</h2>
-					<p class="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto">
-						See how we've helped businesses like yours achieve remarkable growth
-					</p>
-				</div>
-
-				<div class="grid gap-6 sm:gap-8 md:grid-cols-3">
-					{[
-						{
-    name: "Will Mcdonald",
-    role: "Paramount Roofing",
-    image: "/270237289_155896876773300_1848681891731282946_n.jpg",
-    content: "HD has really made our business grow without spending money on ads. They handle all my online stuff + social media and I love it",
- 
-  },
-  {
-    name: "Jimmy Petrov",
-    role: "Chapter One Customs",
-    image: "/IMG_9743.webp",
-    content: "Arsh was a game-changer, managing my Google services to boost local rankings and automating tint appointments so I can focus on delivering top-quality tinting services",
-  
-  },
-  {
-    name: "Tako Mine",
-    role: "Salford Web",
-    image: "/salford.png",
-    content: "They built an automated system that keeps our pipeline full and our members coming back. It's like having a 24/7 sales team without the payroll",
-   
-  }
-  
-					].map((testimonial) => (
-						<Card className="relative overflow-hidden group hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
-							<div class="p-6">
-								<div class="flex justify-between items-start mb-4">
-									<div class="flex items-center gap-4">
-										<div class="w-12 h-12 rounded-full overflow-hidden border border-border">
-											<img 
-												src={testimonial.image} 
-												alt={testimonial.name} 
-												width="48"
-												height="48"
-											/>
-										</div>
-										<div>
-											<p class="font-semibold">{testimonial.name}</p>
-											<p class="text-sm text-muted-foreground">{testimonial.role}</p>
-										</div>
-									</div>
-									<div class="flex text-primary">{"⭐".repeat(5)}</div>
-								</div>
-								<blockquote class="text-sm leading-relaxed mb-4">
-									"{testimonial.content}"
-								</blockquote>
-								
-							</div>
-						</Card>
-					))}
-				</div>
-			</div>
-		</section> -->
+		{/* Clients Section */}
+		<!-- <ClientLogos client:load /> -->
 
 		{/* Pain Points Section */}
 		<PainPoints client:load />

@@ -1,0 +1,250 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { Button } from '../components/ui/button';
+import { Card } from '../components/ui/card';
+import { Badge } from '../components/ui/badge';
+import Globe from '../components/Globe';
+import AppShowcase from '../components/AppShowcase';
+import PainPoints from '../components/PainPoints';
+import OurPromise from '../components/OurPromise';
+import VideoTestimonials from '../components/VideoTestimonials';
+
+---
+
+<Layout 
+	title="Virsa Labs - Expert Digital Marketing & SEO Services | Transform Your Online Presence"
+	description="Elevate your business with Virsa Labs' comprehensive digital marketing and SEO services. Specializing in search engine optimization, content marketing, and data-driven online strategies for measurable growth."
+>
+	<main class="relative" id="main-content">
+		{/* Hero Section */}
+		<section class="relative min-h-[90vh] flex items-center justify-center overflow-hidden mt-4  sm:-mt-0" aria-labelledby="hero-heading" style={{
+      background: 'radial-gradient(circle at center, rgba(85, 40, 160, 0.76) 0%, rgba(20, 10, 60, 0.9) 55%, transparent 80%)'
+    }}>
+			{/* Globe Background */}
+			<div class="absolute inset-0 z-0" aria-hidden="true">
+				<Globe client:only="react" />
+			</div>
+
+			{/* Content */}
+			<div class="container relative z-10 px-4 space-y-8 sm:space-y-12">
+				<div class="max-w-[64rem] mx-auto text-center space-y-6 sm:space-y-8 -translate-y-24 md:-translate-y-4">
+					<h1 id="hero-heading" class="text-4xl font-bold sm:text-5xl pb-2 md:text-6xl lg:text-7xl text-white to-white bg-clip-text text-transparent">
+						Virsa Labs <br /> SEO & Marketing
+					</h1>
+					<div class="space-y-2 sm:space-y-4">
+						<p class="text-xl sm:text-3xl md:text-4xl font-semibold bg-gradient-to-r from-white to-white/80 bg-clip-text">
+							We Make It Work. <span class="text-primary">Period.</span>
+						</p>
+					</div>
+					<div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
+						<a href="/book-consultation" class="button-glow" aria-label="Schedule a free consultation">
+  <div class="button-glow-inner">
+    Book A Call
+  </div>
+</a>
+
+
+						<a href="#trust" class="hidden md:block w-full sm:w-auto" aria-label="View our client success stories">
+							<Button variant="outline" size="lg" className="w-full sm:w-auto text-base sm:text-lg border-orange-500/20 hover:bg-orange-500/10 transition-all duration-300">
+								See Client Results
+							</Button>
+						</a>
+					</div>
+				</div>
+			</div>
+		</section>
+
+	
+		<!-- {/* Trust Section */}
+		<section id="trust" class="py-12 sm:py-24 bg-background relative overflow-hidden -mt-60 sm:mt-0" aria-labelledby="trust-heading" style={{
+			background: 'radial-gradient(circle at center, rgba(85, 40, 160, 0.76) 0%, rgba(20, 10, 60, 0.9) 55%, transparent 80%)'
+		}}>
+			<div class="container relative z-10 px-4">
+				<div class="text-center mb-8 sm:mb-12 pt-8 sm:pt-0">
+					<Badge variant="outline" className="mb-4">SUCCESS STORIES</Badge>
+					<h2 id="trust-heading" class="text-2xl sm:text-3xl font-bold tracking-tight sm:text-4xl mb-4">
+						Trusted by Growing Businesses
+					</h2>
+					<p class="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto">
+						See how we've helped businesses like yours achieve remarkable growth
+					</p>
+				</div>
+
+				<div class="grid gap-6 sm:gap-8 md:grid-cols-3">
+					{[
+						{
+    name: "Will Mcdonald",
+    role: "Paramount Roofing",
+    image: "/270237289_155896876773300_1848681891731282946_n.jpg",
+    content: "HD has really made our business grow without spending money on ads. They handle all my online stuff + social media and I love it",
+ 
+  },
+  {
+    name: "Jimmy Petrov",
+    role: "Chapter One Customs",
+    image: "/IMG_9743.webp",
+    content: "Arsh was a game-changer, managing my Google services to boost local rankings and automating tint appointments so I can focus on delivering top-quality tinting services",
+  
+  },
+  {
+    name: "Tako Mine",
+    role: "Salford Web",
+    image: "/salford.png",
+    content: "They built an automated system that keeps our pipeline full and our members coming back. It's like having a 24/7 sales team without the payroll",
+   
+  }
+  
+					].map((testimonial) => (
+						<Card className="relative overflow-hidden group hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+							<div class="p-6">
+								<div class="flex justify-between items-start mb-4">
+									<div class="flex items-center gap-4">
+										<div class="w-12 h-12 rounded-full overflow-hidden border border-border">
+											<img 
+												src={testimonial.image} 
+												alt={testimonial.name} 
+												width="48"
+												height="48"
+											/>
+										</div>
+										<div>
+											<p class="font-semibold">{testimonial.name}</p>
+											<p class="text-sm text-muted-foreground">{testimonial.role}</p>
+										</div>
+									</div>
+									<div class="flex text-primary">{"⭐".repeat(5)}</div>
+								</div>
+								<blockquote class="text-sm leading-relaxed mb-4">
+									"{testimonial.content}"
+								</blockquote>
+								
+							</div>
+						</Card>
+					))}
+				</div>
+			</div>
+		</section> -->
+
+		{/* Pain Points Section */}
+		<PainPoints client:load />
+
+		{/* Our Promise Section */}
+		<OurPromise client:load />
+
+		{/* The Thrive Guarantee Section */}
+		<section class="py-24 bg-background/50 backdrop-blur-sm relative overflow-hidden" style={{
+			background: 'radial-gradient(circle at center, rgba(85, 40, 160, 0.76) 0%, rgba(20, 10, 60, 0.9) 55%, transparent 80%)'
+		  }}>
+			<div class="container relative z-10" >
+				<div class="text-center mb-12">
+					<Badge variant="outline" className="mb-4">THE THRIVE GUARANTEE</Badge>
+					<h2 class="text-3xl font-bold tracking-tight sm:text-4xl mb-4">
+						Get Results You Deserve — or Don't Pay.
+					</h2>
+					<p class="text-xl text-muted-foreground md:text-2xl max-w-3xl mx-auto leading-relaxed">
+						We're obsessed with your success. If we don't deliver the results we promise, you don't pay. It's that simple.
+					</p>
+				</div>
+
+				<div class="grid sm:grid-cols-3 gap-6">
+					{[
+						{
+							title: "30-Day Risk-Free Trial",
+							description: "Try us out for a month. No contracts, no strings — just results or you walk away.",
+							icon: "⏳",
+    color: "from-red-500/10 to-blue-500/5"
+						},
+						{
+							title: "Market Exclusivity",
+							description: "We work with one business per industry in an area. When you partner with us, your competitors don't get a seat at the table.",
+							icon: "📈",
+    color: "from-blue-500/10 to-blue-500/5"
+						},
+						{
+							title: "100% Transparency",
+							description: "No smoke and mirrors. You'll know exactly what we did and the impact it had.",
+							icon: "🎯",
+    color: "from-blue-500/10 to-blue-500/5"
+							
+						}
+					].map((guarantee) => (
+						<Card className={`group relative overflow-hidden hover:shadow-lg bg-gradient-to-br transition-all group-hover:opacity-100 duration-300 hover:-translate-y-1 ${guarantee.color} `}>
+							<div class="p-6">
+								<div class="flex flex-col items-center text-center gap-4">
+									<div class={`w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform duration-300 `}>
+										<span class="text-3xl">{guarantee.icon}</span>
+									</div>
+									<div>
+										<h3 class="font-semibold text-lg mb-2">{guarantee.title}</h3>
+										<p class="text-muted-foreground">{guarantee.description}</p>
+									</div>
+								</div>
+							</div>
+						</Card>
+					))}
+				</div>
+
+				<div class="mt-12 text-center">
+					<a href="/services">
+						<Button size="lg" className="text-lg">
+							View Our Services
+						</Button>
+					</a>
+				</div>
+			</div>
+		</section>
+
+		{/* App Showcase Section */}
+		<section class="relative bg-background" style={{
+			background: 'radial-gradient(circle at center, rgba(85, 40, 160, 0.76) 0%, rgba(20, 10, 60, 0.9) 55%, transparent 80%)'
+		  }}>
+			<AppShowcase client:only="react" />
+		</section>
+	{/* Video Testimonials Section */}
+	<VideoTestimonials  client:load />
+
+		{/* CTA Section */}
+		<section class="py-24 bg-background/50 backdrop-blur-sm relative overflow-hidden "style={{
+			background: 'radial-gradient(circle at center, rgba(85, 40, 160, 0.76) 0%, rgba(20, 10, 60, 0.9) 55%, transparent 80%)'
+		  }}>
+			<div class="container relative z-10">
+				<div class="max-w-4xl mx-auto space-y-8 text-center">
+					<h2 class="text-3xl font-bold tracking-tight sm:text-4xl mb-4">
+						Ready to Transform Your Business?
+					</h2>
+					<p class="text-xl text-muted-foreground md:text-2xl max-w-3xl mx-auto leading-relaxed">
+						Book your free consultation today and discover how we can help your business thrive in the digital age.
+					</p>
+					<div class="pt-8">
+						<a href="/book-consultation">
+							<Button size="lg" className="text-lg px-8 hover:scale-105 transition-transform duration-300">
+								Book a Call
+							</Button>
+						</a>
+					</div>
+					<p class="text-sm text-muted-foreground">
+						No obligations. No pushy sales. Just a friendly chat about your business goals.
+					</p>
+				</div>
+			</div>
+		</section>
+	</main>
+</Layout>
+
+<script>
+// Ensure smooth scrolling for anchor links
+document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+	anchor.addEventListener('click', function(this: HTMLAnchorElement, e: Event) {
+		e.preventDefault();
+		const href = this.getAttribute('href');
+		if (href) {
+			const target = document.querySelector(href);
+			if (target) {
+				target.scrollIntoView({
+					behavior: 'smooth'
+				});
+			}
+		}
+	});
+});
+</script>
