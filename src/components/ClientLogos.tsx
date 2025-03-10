@@ -13,60 +13,89 @@ interface Client {
 const clients: Client[] = [
   {
     name: "Diamond Detailing",
-    logo: "/diamond.png",
-    industry: "Technology",
-    website: "https://example.com/client1"
+    logo: "/diamon.png",
+    industry: "Diamond Detailing",
+    website: "https://www.diamonddetailingbethlehem.com"
   },
   
   {
     name: "Gen One Detailing",
-    logo: "/genone.png",
-    industry: "Analytics",
-    website: "https://example.com/client3"
-  },
- 
-  {
-    name: "Chapter One Customs",
-    logo: "/chapterone.png",
-    industry: "AI Solutions",
-    website: "https://example.com/client5"
+    logo: "/genon.png",
+    industry: "Gen One Detailing",
+    website: "https://genonedetailing.com"
   },
   {
-    name: "Detailed By Baker",
-    logo: "bake.png",
-    industry: "Web Development",
-    website: "https://example.com/client6"
+    name: "Paramount Roofing & Construction",
+    logo: "/paramounttt.png",
+    industry: "Paramount Roofing & Construction",
+    website: "https://paramountroofingconstruction.com/home"
   },
   {
     name: "M&M Movers NJ",
     logo: "/mandm.png",
-    industry: "Cloud Services",
-    website: "https://example.com/client4"
+    industry: "M&M Movers",
+    website: "https://g.co/kgs/CpdQbEy"
   },
+
+  {
+    name: "Detailed By Baker",
+    logo: "bake.png",
+    industry: "Detailed By Baker",
+    website: "https://detailedbybaker.com"
+  },
+  {
+    name: "Chapter One Customs",
+    logo: "/chapt1.png",
+    industry: "Chapter One Customs",
+    website: "https://g.co/kgs/dPKyH9Z"
+  },
+    
+  
   
   {
     name: "Todd Miller Roofing",
     logo: "/toddmiller.png",
-    industry: "Cybersecurity",
-    website: "https://example.com/client8"
+    industry: "Todd Miller Roofing",
+    website: "https://g.co/kgs/VugMrTy"
   },
-  {
-    name: "Paramount Roofing & Construction",
-    logo: "/paramoun.png",
-    industry: "Innovation",
-    website: "https://example.com/client2"
-  },
+  
   {
     name: "PRG LLC",
     logo: "/prg.png",
-    industry: "Digital Marketing",
-    website: "https://example.com/client7"
+    industry: "PRG LLC",
+    website: "https://maps.app.goo.gl/nbd5WncsN6DP9UeW6"
   },
+  {
+    name: "Ferarri Beauty Fixations",
+    logo: "/ferarri.png",
+    industry: "Ferarri Beauty Fixations",
+    
+  },
+  
+  {
+    name: "NJDC",
+    logo: "/NJDC.png",
+    industry: "New Jersey Dispatching & Consulting",
+
+  },
+  {
+    name: "Diploma Diaries",
+    logo: "/NJDC (1).png",
+    industry: "Diploma Diaries",
+    website: "https://app.diplomadiaries.com/sign-in"
+  },
+  {
+    name: "Turban Tying PA",
+    logo: "/turban.png",
+    industry: "Turban Tying PA",
+    website: "https://turbantying.com"
+  },
+  
 ];
 
 export default function ClientLogos() {
   return (
-    <section className="w-full py-20 relative">
+    <section className="w-full py-60 md:py-20 relative">
       <div 
         className="absolute inset-0 bg-gradient-to-br from-background via-background to-background/50 backdrop-blur-sm"
         style={{
@@ -78,11 +107,10 @@ export default function ClientLogos() {
         <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
           <Badge variant="outline" className="mb-2">TRUSTED PARTNERS</Badge>
           <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
-            Trusted by Industry Leaders
+            Our Portfolio
           </h2>
           <p className="max-w-[700px] text-gray-400 text-base md:text-lg">
-            Join the growing list of innovative companies that trust us with their digital presence
-          </p>
+            Join the growing list of businesses that trust us to grow them online          </p>
         </div>
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 lg:gap-8 max-w-6xl mx-auto">
