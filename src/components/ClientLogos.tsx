@@ -95,7 +95,7 @@ const clients: Client[] = [
 
 export default function ClientLogos() {
   return (
-    <section className="w-full py-60 md:py-20 relative -translate-y-64 -mb-60 md:-mb-20 md:-translate-y-20">
+    <section className="w-full py-36 md:py-20 relative -translate-y-64 -mb-60 md:-mb-20 md:-translate-y-20">
       <div 
         className="absolute inset-0 bg-gradient-to-br from-background via-background to-background/50 backdrop-blur-sm"
         style={{
