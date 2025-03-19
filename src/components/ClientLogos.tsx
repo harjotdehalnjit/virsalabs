@@ -78,18 +78,7 @@ const clients: Client[] = [
     industry: "New Jersey Dispatching & Consulting",
 
   },
-  {
-    name: "Diploma Diaries",
-    logo: "/NJDC (1).png",
-    industry: "Diploma Diaries",
-    website: "https://app.diplomadiaries.com/sign-in"
-  },
-  {
-    name: "Turban Tying PA",
-    logo: "/turban.png",
-    industry: "Turban Tying PA",
-    website: "https://turbantying.com"
-  },
+  
   
 ];
 
